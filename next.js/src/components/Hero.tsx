@@ -41,11 +41,11 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className={`text-center md:text-left max-w-2xl mx-auto md:mx-0 ${baloo.className}`}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-[#1976D2] leading-tight">
-              From First Steps to{' '}
-              <span className="text-[#0056CC] font-extrabold">Forever Home</span>
+              Breeders share, buyers trust,{' '}
+              <span className="text-[#0056CC] font-extrabold">owners remember</span>
             </h1>
             <p className="text-xl md:text-2xl mb-10 text-gray-700 font-light tracking-wide">
-              Updates, Health, and Memories — All in One Place
+              Pawgress is the complete pet journey.
             </p>
             <div className="space-y-4 md:space-y-6">
               <Link 
