@@ -44,12 +44,43 @@ export default function Hero() {
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Connecting{' '}
               <span className="text-blue-600">Ethical Breeders</span>
+              {' '}and{' '}
+              <span className="text-blue-600">Trusted Shelters</span>
               {' '}with{' '}
               <span className="text-blue-600">Loving Families</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Find your perfect companion from trusted, ethical breeders.
+              Find your perfect companion through our verified, trusted partners.
             </p>
+            <div className="flex items-center gap-4">
+              <div className="flex -space-x-3">
+                <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+                  <img 
+                    src="https://ui-avatars.com/api/?name=Sarah+M&background=dbeafe&color=2563eb"
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+                  <img 
+                    src="https://ui-avatars.com/api/?name=John+D&background=eff6ff&color=2563eb"
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+                  <img 
+                    src="https://ui-avatars.com/api/?name=Emma+K&background=dbeafe&color=2563eb"
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-8 h-8 rounded-full border-2 border-white bg-blue-600 text-white text-xs flex items-center justify-center font-medium">+</div>
+              </div>
+              <p className="text-lg text-blue-600/90 font-medium">
+                Join 2,500+ people who have already signed up!
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-colors duration-200 shadow-lg shadow-blue-500/20">
                 Sign Up Early
