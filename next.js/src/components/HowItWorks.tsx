@@ -22,8 +22,8 @@ export default function HowItWorks() {
       title: "Pawgress Match",
       description: "Use our Pawgress Match feature to intuitively swipe through available pets. Express interest instantly or bookmark your favorite furballs — your perfect companion might be just one swipe away.",
       icon: "🐕",
-      color: "bg-blue-50",
-      accent: "text-blue-600"
+      color: "bg-rose-50",
+      accent: "text-rose-600"
     },
     {
       title: "Smart Filters",
@@ -58,22 +58,22 @@ export default function HowItWorks() {
     },
     {
       title: "Match with Buyers",
-      description: "Connect with serious buyers who match your requirements and values.",
+      description: "Pre-screen potential buyers using customizable criteria that matter to you. Seamlessly filter through applicants based on what you think matters most — no more endless profile searching. Our smart filtering ensures you only see homes that truly match your requirements.",
       icon: "🤝",
-      color: "bg-blue-50",
-      accent: "text-blue-600"
+      color: "bg-amber-50",
+      accent: "text-amber-600"
     },
     {
       title: "Manage Easily",
       description: "Track puppy placements, share updates, and handle communications all in one place.",
       icon: "⚡",
-      color: "bg-purple-50",
-      accent: "text-purple-600"
+      color: "bg-red-50",
+      accent: "text-red-600"
     }
   ];
 
   return (
-    <div className={`py-24 bg-white ${baloo.className}`}>
+    <div className={`py-24 bg-slate-100 ${baloo.className}`}>
       <div className="container mx-auto px-4">
         {/* For Buyers */}
         <div className="mb-24">

@@ -28,6 +28,7 @@ export default function Hero() {
             <a href="#home" className="hover:text-blue-600 transition-colors font-bold">Home</a>
             <a href="#buyers" className="hover:text-blue-600 transition-colors font-bold">For Buyers</a>
             <a href="#breeders" className="hover:text-blue-600 transition-colors font-bold">For Breeders</a>
+            <a href="#about" className="hover:text-blue-600 transition-colors font-bold">About Us</a>
           </div>
           <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
             Sign Up
@@ -50,7 +51,7 @@ export default function Hero() {
               <span className="text-blue-600">Loving Families</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Find your perfect companion through our verified, trusted partners.
+              Find your perfect companion from our verified, trusted partners.
             </p>
             <div className="flex items-center gap-4">
               <div className="flex -space-x-3">
@@ -75,10 +76,17 @@ export default function Hero() {
                     className="w-full h-full object-cover"
                   />
                 </div>
+                <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
+                  <img 
+                    src="https://ui-avatars.com/api/?name=Mike+R&background=eff6ff&color=2563eb"
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="w-8 h-8 rounded-full border-2 border-white bg-blue-600 text-white text-xs flex items-center justify-center font-medium">+</div>
               </div>
               <p className="text-lg text-blue-600/90 font-medium">
-                Join 2,500+ people who have already signed up!
+                Join 1500+ people who have already signed up!
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
