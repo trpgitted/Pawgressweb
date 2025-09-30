@@ -3,6 +3,7 @@
 import { Baloo_2 } from 'next/font/google';
 import logo from '../../images/logo.png';
 import pawgressMovie from '../../images/pawgress movie.gif';
+import Link from 'next/link';
 
 const baloo = Baloo_2({
   subsets: ['latin'],
@@ -25,10 +26,11 @@ export default function Hero() {
             <span className="text-2xl font-bold text-blue-600">Pawgress</span>
           </div>
           <div className="hidden md:flex gap-8 text-gray-600 ml-auto mr-8">
-            <a href="#home" className="hover:text-blue-600 transition-colors font-bold">Home</a>
-            <a href="#buyers" className="hover:text-blue-600 transition-colors font-bold">For Buyers</a>
-            <a href="#breeders" className="hover:text-blue-600 transition-colors font-bold">For Breeders</a>
-            <a href="#about" className="hover:text-blue-600 transition-colors font-bold">About Us</a>
+            <Link href="/" className="hover:text-blue-600 transition-colors font-bold">Home</Link>
+            <Link href="#buyers" className="hover:text-blue-600 transition-colors font-bold">For Buyers</Link>
+            <Link href="#breeders" className="hover:text-blue-600 transition-colors font-bold">For Breeders</Link>
+            <Link href="#about" className="hover:text-blue-600 transition-colors font-bold">About Us</Link>
+            <Link href="/mission" className="hover:text-blue-600 transition-colors font-bold">Our Mission</Link>
           </div>
           <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
             Sign Up
