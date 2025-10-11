@@ -1,8 +1,7 @@
 'use client';
 
 import CharlieAnimation from './CharlieAnimation';
-import dogFam1 from '../../images/dog fam1.jpg';
-import lightmodeLogo from '../../images/lightmode logo.jpg';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -49,7 +48,7 @@ export default function Features() {
           {/* Full-width image */}
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src={dogFam1}
+              src="/dog fam1.jpg"
               alt="Happy family with their dog"
               fill
               style={{ objectFit: 'cover' }}
@@ -83,7 +82,7 @@ export default function Features() {
               <div className="md:col-span-4 -ml-3">
                 <div className="w-48 h-16 relative mt-1">
                   <Image
-                    src={lightmodeLogo}
+                    src="/lightmode logo.jpg"
                     alt="Pawgress Logo"
                     fill
                     style={{ objectFit: 'contain' }}

@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import dogFam2 from '../../../images/dogfam2.jpg';
-import lightmodeLogo from '../../../images/lightmode logo.jpg';
+
 import SharedNav from '@/components/SharedNav';
 import Link from 'next/link';
 import { Playfair_Display } from 'next/font/google';
@@ -24,7 +23,7 @@ export default function MissionPage() {
             <div className="absolute inset-4 md:inset-6 rounded-3xl overflow-hidden shadow-2xl">
               <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px] z-10" /> {/* Subtle blur overlay */}
               <Image
-                src={dogFam2}
+                src="/dogfam2.jpg"
                 alt="Family bonding with their dog"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -103,7 +102,7 @@ export default function MissionPage() {
               <div className="md:col-span-4 -ml-3">
                 <div className="w-48 h-16 relative mt-1">
                   <Image
-                    src={lightmodeLogo}
+                    src="/lightmode logo.jpg"
                     alt="Pawgress Logo"
                     fill
                     style={{ objectFit: 'contain' }}

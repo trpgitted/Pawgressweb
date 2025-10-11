@@ -1,7 +1,7 @@
 'use client';
 
 import { Baloo_2 } from 'next/font/google';
-import logo from '../../images/logo.png';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -20,7 +20,7 @@ export default function Navigation() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img
-            src={logo.src}
+            src="/logo.png"
             alt="Pawgress Logo"
             style={{ width: '40px', height: '40px' }}
           />

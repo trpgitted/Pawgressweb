@@ -1,8 +1,7 @@
 'use client';
 
 import { Baloo_2 } from 'next/font/google';
-import logo from '../../images/logo.png';
-import pawgressMovie from '../../images/pawgress movie.gif';
+
 import Link from 'next/link';
 
 const baloo = Baloo_2({
@@ -19,7 +18,7 @@ export default function Hero() {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <img
-              src={logo.src}
+              src="/logo.png"
               alt="Pawgress Logo"
               style={{ width: '40px', height: '40px' }}
             />
@@ -120,7 +119,7 @@ export default function Hero() {
                 <div className="absolute w-[200%] h-full flex items-center animate-pan bg-gradient-radial from-blue-500/20 via-blue-200/20 to-transparent">
                   <div className="absolute inset-0 bg-gradient-radial from-blue-600/15 via-blue-300/15 to-transparent"></div>
                   <img 
-                    src={pawgressMovie.src}
+                    src="/pawgress movie.gif"
                     alt="Pawgress Animation"
                     className="w-full h-[120%] object-contain z-10 transition-opacity duration-300 drop-shadow-[0_0_20px_rgba(37,99,235,0.2)]"
                     style={{ 
