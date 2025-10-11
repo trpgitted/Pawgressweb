@@ -1,5 +1,1 @@
-{
-  "buildCommand": "cd next.js && npm ci && npm run build",
-  "outputDirectory": "next.js/.next",
-  "installCommand": "cd next.js && npm ci"
-}
+{}
