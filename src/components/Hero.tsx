@@ -117,7 +117,7 @@ export default function Hero() {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             {/* Badge */}
             <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 sm:px-6 rounded-full text-sm font-semibold tracking-wide mb-6 sm:mb-8">
-              � Professional • Transparent • Collaborative
+              {'\u{1F43E}'} Professional • Transparent • Collaborative
             </div>
 
             {/* Heading */}
@@ -207,7 +207,7 @@ export default function Hero() {
 
               {/* Floating notification elements - positioned in four corners */}
               {/* Top Left Corner */}
-              <div className="absolute top-4 -left-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce z-20" style={{animationDelay: '0.5s'}}>
+              <div className="absolute top-2 left-2 sm:top-4 sm:-left-4 bg-white rounded-lg shadow-lg p-2 sm:p-3 block animate-bounce z-20" style={{animationDelay: '0.5s'}}>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-xs font-medium text-gray-700">Track Milestones</span>
@@ -215,7 +215,7 @@ export default function Hero() {
               </div>
 
               {/* Top Right Corner */}
-              <div className="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce z-20" style={{animationDelay: '1s'}}>
+              <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white rounded-lg shadow-lg p-2 sm:p-3 block animate-bounce z-20" style={{animationDelay: '1s'}}>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
                   <span className="text-xs font-medium text-gray-700">Track Medical Records</span>
@@ -223,7 +223,7 @@ export default function Hero() {
               </div>
 
               {/* Bottom Left Corner */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce z-20" style={{animationDelay: '1.5s'}}>
+              <div className="absolute bottom-2 left-2 sm:-bottom-4 sm:-left-4 bg-white rounded-lg shadow-lg p-2 sm:p-3 block animate-bounce z-20" style={{animationDelay: '1.5s'}}>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
                   <span className="text-xs font-medium text-gray-700">Organize Pet Messages</span>
@@ -231,7 +231,7 @@ export default function Hero() {
               </div>
 
               {/* Bottom Right Corner */}
-              <div className="absolute bottom-4 -right-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce z-20" style={{animationDelay: '2s'}}>
+              <div className="absolute bottom-2 right-2 sm:bottom-4 sm:-right-4 bg-white rounded-lg shadow-lg p-2 sm:p-3 block animate-bounce z-20" style={{animationDelay: '2s'}}>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
                   <span className="text-xs font-medium text-gray-700">Share Growth Updates</span>
