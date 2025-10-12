@@ -7,7 +7,7 @@ export default function Features() {
     {
       icon: '\u{1F4CB}',
       title: 'Rich Pet Profiles',
-      description: 'Create detailed profiles with photos, breed info, DOB, markings, microchip ID, and reservation status. Track complete lineage and parentage.',
+      description: 'Create detailed profiles with photos, breed info, DOB, sex, weight tracking, hypoallergenic tags, and reservation status. Track complete lineage and parentage.',
       color: 'from-blue-100 to-indigo-100',
       iconBg: 'bg-blue-500',
       image: '/Pet-Profile.jpeg',

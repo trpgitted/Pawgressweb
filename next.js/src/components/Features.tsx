@@ -1,7 +1,5 @@
 'use client';
 
-import CharlieAnimation from './CharlieAnimation';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
