@@ -1,56 +1,54 @@
-'use client';
-
-import Link from 'next/link';
-
-export default function Features() {
-  const features = [
-    {
-      icon: '\u{1F4CB}',
-      title: 'Rich Pet Profiles',
-      description: 'Create detailed profiles with photos, breed info, DOB, markings, microchip ID, and reservation status. Track complete lineage and parentage.',
-      color: 'from-blue-100 to-indigo-100',
-      iconBg: 'bg-blue-500',
-      image: '/Pet-Profile.jpeg',
-    },
-    {
-      icon: '\u{1F4F1}',
+'use client';    {
+      icon: '📱',
       title: 'Pawgress Timeline',
       description: 'Automatically build chronological galleries of growth with media and age stamps. Every update creates lasting memories.',
       color: 'from-purple-100 to-violet-100',
       iconBg: 'bg-purple-500',
-      image: '/Pet-Timeline.jpeg',
+    },ort Link from 'next/link';
+
+export default function Features() {
+  const features = [
+    {
+      icon: '📋',
+      title: 'Rich Pet Profiles',
+      description: 'Create detailed profiles with photos, breed info, DOB, markings, microchip ID, and reservation status. Track complete lineage and parentage.',
+      color: 'from-blue-100 to-indigo-100',
+      iconBg: 'bg-blue-500',
     },
     {
-      icon: '\u{1F517}',
+      icon: '�',
+      title: 'Pawgress Timeline',
+      description: 'Automatically build chronological galleries of growth with media and age stamps. Every update creates lasting memories.',
+      color: 'from-purple-100 to-violet-100',
+      iconBg: 'bg-purple-500',
+    },
+    {
+      icon: '🔗',
       title: 'Invite Links & Access',
       description: 'Share unique links for each pet. Buyers join instantly to see their pet\'s timeline and dedicated chat conversations.',
       color: 'from-green-100 to-emerald-100',
       iconBg: 'bg-green-500',
-      image: '/Pet-Profiles-Page.jpeg',
     },
     {
-      icon: '\u{1F3E5}',
+      icon: '🏥',
       title: 'Health Records & Tracking',
       description: 'Organize medical entries, vaccinations, vet visits, medications, and test results. Track weight trends over time.',
       color: 'from-red-100 to-pink-100',
       iconBg: 'bg-red-500',
-      image: '/Medical-Records.jpeg',
     },
     {
-      icon: '\u{1F4AC}',
+      icon: '�',
       title: 'Focused Communication',
       description: 'One-to-one organized chats per pet keep conversations focused and buyers engaged throughout the journey.',
       color: 'from-orange-100 to-amber-100',
       iconBg: 'bg-orange-500',
-      image: '/Chat-Screen.jpeg',
     },
     {
-      icon: '\u{1F916}',
+      icon: '�',
       title: 'AI Assistant (Astro)',
       description: 'Ask general pet care questions or get pet-specific guidance with contextual information when available.',
       color: 'from-teal-100 to-cyan-100',
       iconBg: 'bg-teal-500',
-      image: '/Astro.jpeg',
     },
   ];
 
@@ -60,7 +58,7 @@ export default function Features() {
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <div className="inline-flex items-center bg-blue-50 text-blue-600 px-4 py-2 sm:px-6 rounded-full text-sm font-semibold tracking-wide mb-6">
-            <span>✨</span> Why Choose Pawgress
+            ✨ Why Choose Pawgress
           </div>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-baloo">
@@ -83,61 +81,39 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Features Showcase - Alternating Layout */}
-        <div className="space-y-20 sm:space-y-24 lg:space-y-32 mb-16">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-16">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 xl:gap-16 items-center`}
+              className="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200 transform hover:-translate-y-2"
             >
-              {/* Feature Screenshot */}
-              <div className="w-full lg:w-1/2">
-                <div className="group relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 transform hover:scale-105">
-                  {/* Decorative gradient blob */}
-                  <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full opacity-20 blur-3xl`}></div>
-                  <div className={`absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full opacity-20 blur-3xl`}></div>
-                  
-                  <div className="relative p-4 sm:p-6 bg-gradient-to-br from-gray-50 to-white">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title}
-                      className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-300"
-                    />
-                  </div>
-                </div>
-              </div>
-
+              {/* Background Gradient */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-50 rounded-2xl transition-opacity duration-300`}></div>
+              
               {/* Content */}
-              <div className="w-full lg:w-1/2 space-y-6">
-                {/* Icon Badge */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${feature.color} rounded-2xl shadow-xl`}>
-                  <div className={`w-14 h-14 sm:w-16 sm:h-16 ${feature.iconBg} rounded-xl flex items-center justify-center text-white text-2xl sm:text-3xl`}>
-                    {feature.icon}
-                  </div>
+              <div className="relative z-10">
+                {/* Icon */}
+                <div className={`inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 ${feature.iconBg} rounded-2xl mb-4 sm:mb-6 text-white text-2xl sm:text-3xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  {feature.icon}
                 </div>
-
+                
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 font-baloo">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-blue-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
-
+                
                 {/* Description */}
-                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-base sm:text-lg group-hover:text-gray-700 transition-colors duration-300">
                   {feature.description}
                 </p>
+              </div>
 
-                {/* Feature Highlights */}
-                <div className="flex flex-wrap gap-3 pt-4">
-                  <span className={`px-4 py-2 bg-gradient-to-r ${feature.color} rounded-full text-sm font-medium text-gray-700`}>
-                    Easy to Use
-                  </span>
-                  <span className={`px-4 py-2 bg-gradient-to-r ${feature.color} rounded-full text-sm font-medium text-gray-700`}>
-                    Real-time
-                  </span>
-                  <span className={`px-4 py-2 bg-gradient-to-r ${feature.color} rounded-full text-sm font-medium text-gray-700`}>
-                    Secure
-                  </span>
-                </div>
+              {/* Hover Arrow */}
+              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </div>
             </div>
           ))}

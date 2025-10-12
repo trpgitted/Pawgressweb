@@ -37,64 +37,59 @@ export default function MissionPage() {
           {/* Right side - Minimalistic Text */}
           <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] flex items-center justify-center px-8 md:px-16">
             <div className="w-full max-w-lg">
-              <h1 className={`tracking-tight ${playfair.className}`}>
-                <span className="block text-2xl md:text-3xl lg:text-4xl leading-tight text-gray-600 mb-4">
-                  Our Mission
-                </span>
-                <span className="block text-3xl md:text-5xl lg:text-6xl leading-tight text-gray-800 font-bold">
-                  Empowering ethical breeders and devoted pet owners to 
-                  <span className="text-blue-600"> collaborate transparently</span>
+              <h1 className={`tracking-tight ${playfair.className} italic`}>
+                <span className="block text-3xl md:text-5xl lg:text-6xl leading-tight text-gray-800">
+                  At the heart of
+                  <span className="block mt-2">
+                    <span className="text-blue-600">Pawgress</span>
+                  </span>
                 </span>
               </h1>
             </div>
           </div>
         </div>
 
-        {/* Mission Details Section */}
+        {/* Quote Section */}
         <div className="w-full bg-blue-50 min-h-screen relative">
           <div className="max-w-[90rem] mx-auto px-6 h-full py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
-              {/* Left side - Mission Statement */}
-              <div className="space-y-8">
-                <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold tracking-wide mb-6">
-                  🎯 Our Vision
-                </div>
-                <h2 className={`${playfair.className} text-gray-800 text-3xl md:text-4xl leading-relaxed font-semibold`}>
-                  Through growth tracking, health organization, and meaningful updates—so every pet's journey is 
-                  <span className="text-blue-600"> documented, understood, and celebrated.</span>
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  We believe that transparency builds trust, and trust creates better outcomes for both breeders and pet owners. 
-                  Our platform provides the tools to make every interaction professional, organized, and meaningful.
-                </p>
-              </div>
+            {/* First quote part - upper left */}
+            <div className="max-w-md ml-20 mt-20">
+              <p className={`${playfair.className} text-gray-800 text-2xl md:text-3xl leading-relaxed`}>
+                We want to give every pet<br />
+                the chance to thrive
+              </p>
+            </div>
 
-              {/* Right side - Value Props */}
-              <div className="space-y-8">
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">For Ethical Breeders</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Save time, present professionally, keep buyers engaged, and reduce repetitive questions 
-                    through organized updates and accessible data.
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">For Pet Owners</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Feel connected, informed, and reassured—with a living archive of your pet's early life 
-                    and ongoing care history.
-                  </p>
-                </div>
+            {/* Arrow SVG */}
+            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 text-blue-200">
+              <svg viewBox="0 0 100 100" className="w-full h-full">
+                <path
+                  d="M10,10 Q50,50 90,90"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  className="opacity-70"
+                />
+                <path
+                  d="M80,90 L90,90 L90,80"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  className="opacity-70"
+                />
+              </svg>
+            </div>
 
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
-                  <h3 className="text-xl font-bold mb-4">Our Commitment</h3>
-                  <p className="leading-relaxed">
-                    Professional, modern, trust-building, and growth-focused—centered on collaboration, 
-                    clarity, and care for every pet's journey.
-                  </p>
-                </div>
-              </div>
+            {/* Second quote part - bottom right */}
+            <div className="max-w-md ml-auto mr-20 mt-80">
+              <p className={`${playfair.className} text-gray-800 text-2xl md:text-3xl leading-relaxed`}>
+                by providing transparency<br />
+                in the adoption process<br />
+                and connecting them with<br />
+                loving, responsible homes
+              </p>
             </div>
           </div>
         </div>

@@ -1,107 +1,82 @@
 'use client';
 
+import CharlieAnimation from './CharlieAnimation';
+
 import Image from 'next/image';
-
-import SharedNav from '@/components/SharedNav';
 import Link from 'next/link';
-import { Playfair_Display } from 'next/font/google';
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-});
+export default function Features() {
+  const features = [
+    {
+      title: "Swipe and Connect",
+      description: "Discover and connect with your perfect companion through our intuitive matching experience. Simple, natural, and meant to be.",
+      icon: "✨",
+      color: "bg-[#1976D2]",
+      borderColor: "border-[#0056CC]",
+      images: []
+    },
+    {
+      title: "Medical Tracking",
+      description: "Keep all vaccinations, medications, and vet visits organized in one place.",
+      icon: "🏥",
+      color: "bg-[#1976D2]",
+      borderColor: "border-[#0056CC]",
+      images: []
+    },
+    {
+      title: "Breeder Connect",
+      description: "Stay connected with breeders and receive real-time updates about your future pet.",
+      icon: "💌",
+      color: "bg-[#1976D2]",
+      borderColor: "border-[#0056CC]",
+      images: []
+    },
+    {
+      title: "Smart Records",
+      description: "AI-powered tools to help summarize medical records and enhance pet photos.",
+      icon: "🤖",
+      color: "bg-[#1976D2]",
+      borderColor: "border-[#0056CC]",
+      images: []
+    }
+  ];
 
-export default function MissionPage() {
   return (
-    <main className="relative min-h-screen w-full bg-gradient-to-b from-blue-50 to-white pt-24">
-      <SharedNav />
+    <div className="bg-white">
       <div className="w-full">
-        <div className="min-h-[80vh] flex flex-col md:flex-row">
-          {/* Left side - Image */}
-          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] overflow-hidden">
-            <div className="absolute inset-4 md:inset-6 rounded-3xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px] z-10" /> {/* Subtle blur overlay */}
-              <Image
-                src="/dogfam2.jpg"
-                alt="Family bonding with their dog"
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-                className="object-center filter brightness-105 contrast-95"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white md:hidden" />
-            </div>
+        <div className="relative w-full h-[600px]">
+          {/* Full-width image */}
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src="/dog fam1.jpg"
+              alt="Happy family with their dog"
+              fill
+              style={{ objectFit: 'cover' }}
+              priority
+            />
+            {/* Dark overlay for text readability */}
+            {/* Gradient overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
           </div>
-
-          {/* Right side - Minimalistic Text */}
-          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] flex items-center justify-center px-8 md:px-16">
-            <div className="w-full max-w-lg">
-              <h1 className={`tracking-tight ${playfair.className}`}>
-                <span className="block text-2xl md:text-3xl lg:text-4xl leading-tight text-gray-600 mb-4">
-                  Our Mission
-                </span>
-                <span className="block text-3xl md:text-5xl lg:text-6xl leading-tight text-gray-800 font-bold">
-                  Empowering ethical breeders and devoted pet owners to 
-                  <span className="text-blue-600"> collaborate transparently</span>
-                </span>
-              </h1>
-            </div>
-          </div>
-        </div>
-
-        {/* Mission Details Section */}
-        <div className="w-full bg-blue-50 min-h-screen relative">
-          <div className="max-w-[90rem] mx-auto px-6 h-full py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
-              {/* Left side - Mission Statement */}
-              <div className="space-y-8">
-                <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold tracking-wide mb-6">
-                  🎯 Our Vision
-                </div>
-                <h2 className={`${playfair.className} text-gray-800 text-3xl md:text-4xl leading-relaxed font-semibold`}>
-                  Through growth tracking, health organization, and meaningful updates—so every pet's journey is 
-                  <span className="text-blue-600"> documented, understood, and celebrated.</span>
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  We believe that transparency builds trust, and trust creates better outcomes for both breeders and pet owners. 
-                  Our platform provides the tools to make every interaction professional, organized, and meaningful.
-                </p>
-              </div>
-
-              {/* Right side - Value Props */}
-              <div className="space-y-8">
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">For Ethical Breeders</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Save time, present professionally, keep buyers engaged, and reduce repetitive questions 
-                    through organized updates and accessible data.
-                  </p>
-                </div>
-                
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">For Pet Owners</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Feel connected, informed, and reassured—with a living archive of your pet's early life 
-                    and ongoing care history.
-                  </p>
-                </div>
-
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
-                  <h3 className="text-xl font-bold mb-4">Our Commitment</h3>
-                  <p className="leading-relaxed">
-                    Professional, modern, trust-building, and growth-focused—centered on collaboration, 
-                    clarity, and care for every pet's journey.
-                  </p>
-                </div>
-              </div>
+          
+          {/* Top left text overlay */}
+          <div className="relative z-10 h-full flex flex-col justify-center px-12 md:px-24">
+            <div className="max-w-2xl">
+              <h2 className="text-[3.5rem] font-bold mb-6 leading-tight text-white tracking-tight">
+                Breeders share,<br/>
+                buyers trust,<br/>
+                owners remember
+              </h2>
+              <p className="text-2xl text-white/90 font-light tracking-wide">
+                Pawgress is the complete pet journey.
+              </p>
             </div>
           </div>
         </div>
 
         {/* Footer Section */}
-        <div className="w-full bg-black text-white py-20">
-          <div className="max-w-[90rem] mx-auto px-6">
+        <div className="bg-black text-white py-20">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               {/* Logo and social section */}
               <div className="md:col-span-4 -ml-3">
@@ -147,10 +122,10 @@ export default function MissionPage() {
               <div className="md:col-span-2">
                 <h3 className="text-lg font-semibold mb-4">Resources</h3>
                 <ul className="space-y-3">
-                  <li><Link href="#success" className="text-white/70 hover:text-white transition-colors">Success Stories</Link></li>
-                  <li><Link href="#blog" className="text-white/70 hover:text-white transition-colors">Blog</Link></li>
-                  <li><Link href="#guides" className="text-white/70 hover:text-white transition-colors">Adoption Guides</Link></li>
-                  <li><Link href="#faq" className="text-white/70 hover:text-white transition-colors">FAQ</Link></li>
+                  <li><a href="#success" className="text-white/70 hover:text-white transition-colors">Success Stories</a></li>
+                  <li><a href="#blog" className="text-white/70 hover:text-white transition-colors">Blog</a></li>
+                  <li><a href="#guides" className="text-white/70 hover:text-white transition-colors">Adoption Guides</a></li>
+                  <li><a href="#faq" className="text-white/70 hover:text-white transition-colors">FAQ</a></li>
                 </ul>
               </div>
 
@@ -158,10 +133,10 @@ export default function MissionPage() {
               <div className="md:col-span-2">
                 <h3 className="text-lg font-semibold mb-4">Support</h3>
                 <ul className="space-y-3">
-                  <li><Link href="#contact" className="text-white/70 hover:text-white transition-colors">Contact Us</Link></li>
-                  <li><Link href="#help" className="text-white/70 hover:text-white transition-colors">Help Center</Link></li>
-                  <li><Link href="#privacy" className="text-white/70 hover:text-white transition-colors">Privacy Policy</Link></li>
-                  <li><Link href="#terms" className="text-white/70 hover:text-white transition-colors">Terms of Service</Link></li>
+                  <li><a href="#contact" className="text-white/70 hover:text-white transition-colors">Contact Us</a></li>
+                  <li><a href="#help" className="text-white/70 hover:text-white transition-colors">Help Center</a></li>
+                  <li><a href="#privacy" className="text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
+                  <li><a href="#terms" className="text-white/70 hover:text-white transition-colors">Terms of Service</a></li>
                 </ul>
               </div>
 
@@ -190,15 +165,15 @@ export default function MissionPage() {
               <div className="flex flex-col md:flex-row justify-between items-center">
                 <p className="text-white/60 text-sm">© 2025 Pawgress. All rights reserved.</p>
                 <div className="flex gap-6 mt-4 md:mt-0">
-                  <Link href="#" className="text-white/60 hover:text-white text-sm">Privacy Policy</Link>
-                  <Link href="#" className="text-white/60 hover:text-white text-sm">Terms of Service</Link>
-                  <Link href="#" className="text-white/60 hover:text-white text-sm">Cookie Policy</Link>
+                  <a href="#" className="text-white/60 hover:text-white text-sm">Privacy Policy</a>
+                  <a href="#" className="text-white/60 hover:text-white text-sm">Terms of Service</a>
+                  <a href="#" className="text-white/60 hover:text-white text-sm">Cookie Policy</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

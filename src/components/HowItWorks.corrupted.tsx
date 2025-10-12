@@ -1,4 +1,8 @@
-'use client';
+'use       number: '01',
+      title: 'Receive Invite Link',
+      description: 'Get a unique link from your breeder for your specific pet. Join instantly to access your pet\'s dedicated timeline and chat.',
+      icon: '🔗',
+      color: 'from-blue-500 to-indigo-600',t';
 
 export default function HowItWorks() {
   const buyerSteps = [
@@ -6,21 +10,21 @@ export default function HowItWorks() {
       number: '01',
       title: 'Receive Invite Link',
       description: 'Get a unique link from your breeder for your specific pet. Join instantly to access your pet\'s dedicated timeline and chat.',
-      icon: '\u{1F517}',
+      icon: '�',
       color: 'from-blue-500 to-indigo-600',
     },
     {
       number: '02',
       title: 'View Pawgress Timeline',
       description: 'Access a chronological gallery of your pet\'s growth with photos, videos, and age-stamped updates from early weeks onward.',
-      icon: '\u{1F4F1}',
+      icon: '�',
       color: 'from-purple-500 to-pink-600',
     },
     {
       number: '03',
       title: 'Stay Connected & Informed',
       description: 'Message your breeder directly, view health records, track weight trends, and preserve every milestone in your pet\'s journey.',
-      icon: '\u{1F4AC}',
+      icon: '💬',
       color: 'from-green-500 to-teal-600',
     },
   ];
@@ -30,21 +34,21 @@ export default function HowItWorks() {
       number: '01',
       title: 'Create Pet Profiles',
       description: 'Build rich profiles with photos, breed info, DOB, markings, microchip ID, and parentage. Group pets into litters for easy management.',
-      icon: '\u{1F4CB}',
+      icon: '📋',
       color: 'from-emerald-500 to-green-600',
     },
     {
       number: '02',
       title: 'Send Bulk Updates',
       description: 'Share one update (text, photos, videos) with multiple pets or entire litters. Updates automatically build each pet\'s Pawgress timeline.',
-      icon: '\u{1F4E4}',
+      icon: '�',
       color: 'from-orange-500 to-red-600',
     },
     {
       number: '03',
       title: 'Engage & Communicate',
       description: 'Share unique invite links with buyers, manage organized chats per pet, and maintain health records for transparent collaboration.',
-      icon: '\u{1F91D}',
+      icon: '🤝',
       color: 'from-cyan-500 to-blue-600',
     },
   ];
@@ -56,7 +60,7 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <div className="inline-flex items-center bg-indigo-50 text-indigo-600 px-4 py-2 sm:px-6 rounded-full text-sm font-semibold tracking-wide mb-6">
-            <span>🚀</span> How It Works
+            🚀 How It Works
           </div>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-baloo">

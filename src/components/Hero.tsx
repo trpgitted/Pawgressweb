@@ -204,18 +204,36 @@ export default function Hero() {
                 />
               </div>
 
-              {/* Floating elements */}
-              <div className="absolute top-8 -right-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce" style={{animationDelay: '2s'}}>
+              {/* Floating notification elements - positioned in four corners */}
+              {/* Top Left Corner */}
+              <div className="absolute top-4 -left-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce z-20" style={{animationDelay: '0.5s'}}>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span className="text-xs font-medium text-gray-700">Verified Breeder</span>
+                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <span className="text-xs font-medium text-gray-700">Track Milestones</span>
                 </div>
               </div>
 
-              <div className="absolute bottom-8 -left-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce" style={{animationDelay: '3s'}}>
+              {/* Top Right Corner */}
+              <div className="absolute top-4 right-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce z-20" style={{animationDelay: '1s'}}>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                  <span className="text-xs font-medium text-gray-700">Health Records</span>
+                  <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                  <span className="text-xs font-medium text-gray-700">Track Medical Records</span>
+                </div>
+              </div>
+
+              {/* Bottom Left Corner */}
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce z-20" style={{animationDelay: '1.5s'}}>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                  <span className="text-xs font-medium text-gray-700">Organize Pet Messages</span>
+                </div>
+              </div>
+
+              {/* Bottom Right Corner */}
+              <div className="absolute bottom-4 -right-4 bg-white rounded-lg shadow-lg p-3 hidden sm:block animate-bounce z-20" style={{animationDelay: '2s'}}>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
+                  <span className="text-xs font-medium text-gray-700">Share Growth Updates</span>
                 </div>
               </div>
             </div>
