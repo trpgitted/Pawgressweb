@@ -34,7 +34,7 @@ export default function Hero() {
             <Link href="#breeders" className="hover:text-blue-600 transition-colors font-medium">
               For Breeders
             </Link>
-            <Link href="#about" className="hover:text-blue-600 transition-colors font-medium">
+            <Link href="/about" className="hover:text-blue-600 transition-colors font-medium">
               About
             </Link>
             <Link href="/mission" className="hover:text-blue-600 transition-colors font-medium">
@@ -88,7 +88,7 @@ export default function Hero() {
                 For Breeders
               </Link>
               <Link 
-                href="#about" 
+                href="/about" 
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -117,39 +117,40 @@ export default function Hero() {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             {/* Badge */}
             <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 sm:px-6 rounded-full text-sm font-semibold tracking-wide mb-6 sm:mb-8">
-              🚀 Join the Waitlist • Limited Spots Available
+              � Professional • Transparent • Collaborative
             </div>
 
             {/* Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 font-baloo">
-              Connecting{' '}
-              <span className="text-blue-600 relative">
+              Empowering{' '}
+              <span className="text-blue-600 relative inline-block">
                 Ethical Breeders
                 <svg 
-                  className="absolute -bottom-2 left-0 w-full h-3 text-blue-200" 
-                  viewBox="0 0 300 12" 
+                  className="absolute -bottom-1 left-0 w-full h-2 text-blue-200" 
+                  viewBox="0 0 300 8" 
                   fill="currentColor"
+                  preserveAspectRatio="none"
                 >
-                  <path d="M0,6 Q150,0 300,6 L300,12 L0,12 Z" />
+                  <path d="M0,4 Q150,0 300,4 L300,8 L0,8 Z" />
                 </svg>
               </span>
               {' '}and{' '}
-              <span className="text-blue-600 relative">
-                Trusted Shelters
+              <span className="text-blue-600 relative inline-block">
+                Pet Owners
                 <svg 
-                  className="absolute -bottom-2 left-0 w-full h-3 text-blue-200" 
-                  viewBox="0 0 300 12" 
+                  className="absolute -bottom-1 left-0 w-full h-2 text-blue-200" 
+                  viewBox="0 0 300 8" 
                   fill="currentColor"
+                  preserveAspectRatio="none"
                 >
-                  <path d="M0,6 Q150,0 300,6 L300,12 L0,12 Z" />
+                  <path d="M0,4 Q150,0 300,4 L300,8 L0,8 Z" />
                 </svg>
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              The premier platform connecting responsible pet buyers with ethical breeders and trusted animal shelters. 
-              Find your perfect companion with complete health records and transparency.
+              Collaborate transparently through growth tracking, health organization, and meaningful updates—so every pet's journey is documented, understood, and celebrated.
             </p>
 
             {/* CTA Buttons */}
@@ -157,9 +158,9 @@ export default function Hero() {
               <button className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Get Started Free
               </button>
-              <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold text-lg">
+              <a href="#features" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold text-lg text-center">
                 Learn More
-              </button>
+              </a>
             </div>
 
             {/* Social Proof */}
@@ -195,12 +196,12 @@ export default function Hero() {
               <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-indigo-200 rounded-full opacity-30 animate-pulse" style={{animationDelay: '1s'}}></div>
               
               {/* Main image container */}
-              <div className="relative bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-indigo-500/10 rounded-2xl"></div>
+              <div className="relative bg-white rounded-2xl shadow-2xl p-6 transform hover:scale-105 transition-all duration-300 cursor-pointer group">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-indigo-500/10 rounded-2xl group-hover:from-blue-500/20 group-hover:to-indigo-500/20 transition-all duration-300"></div>
                 <img 
                   src="/pawgress movie.gif"
                   alt="Pawgress Platform Preview"
-                  className="w-full h-auto rounded-xl relative z-10 shadow-lg"
+                  className="w-full h-auto rounded-xl relative z-10 shadow-lg group-hover:shadow-2xl transition-all duration-300"
                 />
               </div>
 

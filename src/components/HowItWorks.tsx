@@ -5,21 +5,21 @@ export default function HowItWorks() {
     {
       number: '01',
       title: 'Receive Invite Link',
-      description: 'Get a unique link from your breeder for your specific pet. Join instantly to access your pet\'s dedicated timeline and chat.',
+      description: 'Get a unique invite link from your breeder for your specific pet. Join instantly—no app download required—to access your pet\'s dedicated profile and timeline.',
       icon: '\u{1F517}',
       color: 'from-blue-500 to-indigo-600',
     },
     {
       number: '02',
-      title: 'View Pawgress Timeline',
-      description: 'Access a chronological gallery of your pet\'s growth with photos, videos, and age-stamped updates from early weeks onward.',
+      title: 'Linked Pet Access',
+      description: 'View your pet\'s complete Pawgress timeline with photos, videos, and updates organized chronologically. Access health records, weight trends, and parentage information.',
       icon: '\u{1F4F1}',
       color: 'from-purple-500 to-pink-600',
     },
     {
       number: '03',
-      title: 'Stay Connected & Informed',
-      description: 'Message your breeder directly, view health records, track weight trends, and preserve every milestone in your pet\'s journey.',
+      title: 'Direct Chat & Personal Profiles',
+      description: 'Message your breeder with organized one-to-one chat, create your own personal pet profiles once home, and preserve every milestone in a living archive.',
       icon: '\u{1F4AC}',
       color: 'from-green-500 to-teal-600',
     },
@@ -28,22 +28,22 @@ export default function HowItWorks() {
   const breederSteps = [
     {
       number: '01',
-      title: 'Create Pet Profiles',
-      description: 'Build rich profiles with photos, breed info, DOB, markings, microchip ID, and parentage. Group pets into litters for easy management.',
+      title: 'Pet Profile Management',
+      description: 'Create comprehensive pet profiles with photos, breed, DOB, sex, markings, microchip ID, and reservation status. Link litters and track parentage with verified lineage.',
       icon: '\u{1F4CB}',
       color: 'from-emerald-500 to-green-600',
     },
     {
       number: '02',
-      title: 'Send Bulk Updates',
-      description: 'Share one update (text, photos, videos) with multiple pets or entire litters. Updates automatically build each pet\'s Pawgress timeline.',
+      title: 'Bulk Updates & Invite Links',
+      description: 'Send one update to multiple pets or entire litters—every update automatically builds each pet\'s timeline. Share unique invite links with buyers for seamless onboarding.',
       icon: '\u{1F4E4}',
       color: 'from-orange-500 to-red-600',
     },
     {
       number: '03',
-      title: 'Engage & Communicate',
-      description: 'Share unique invite links with buyers, manage organized chats per pet, and maintain health records for transparent collaboration.',
+      title: 'Buyer Communication & Parent Engagement',
+      description: 'Manage organized chats per pet, log health records (vaccinations, vet visits, weight), and keep buyers engaged with ongoing updates even after they bring their pet home.',
       icon: '\u{1F91D}',
       color: 'from-cyan-500 to-blue-600',
     },
@@ -61,14 +61,15 @@ export default function HowItWorks() {
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-baloo">
             Simple Steps to{' '}
-            <span className="text-blue-600 relative">
+            <span className="text-blue-600 relative inline-block">
               Transparent Collaboration
               <svg 
-                className="absolute -bottom-2 left-0 w-full h-3 text-blue-200" 
-                viewBox="0 0 400 12" 
+                className="absolute -bottom-1 left-0 w-full h-2 text-blue-200" 
+                viewBox="0 0 400 8" 
                 fill="currentColor"
+                preserveAspectRatio="none"
               >
-                <path d="M0,6 Q200,0 400,6 L400,12 L0,12 Z" />
+                <path d="M0,4 Q200,0 400,4 L400,8 L0,8 Z" />
               </svg>
             </span>
           </h2>

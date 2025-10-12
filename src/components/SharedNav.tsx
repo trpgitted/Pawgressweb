@@ -32,13 +32,13 @@ export default function SharedNav() {
           <Link href="/" className={`hover:text-blue-600 transition-colors font-bold ${pathname === '/' ? 'text-blue-600' : ''}`}>
             Home
           </Link>
-          <Link href="#buyers" className="hover:text-blue-600 transition-colors font-bold">
+          <Link href="/#buyers" className="hover:text-blue-600 transition-colors font-bold">
             For Buyers
           </Link>
-          <Link href="#breeders" className="hover:text-blue-600 transition-colors font-bold">
+          <Link href="/#breeders" className="hover:text-blue-600 transition-colors font-bold">
             For Breeders
           </Link>
-          <Link href="#about" className="hover:text-blue-600 transition-colors font-bold">
+          <Link href="/about" className={`hover:text-blue-600 transition-colors font-bold ${pathname === '/about' ? 'text-blue-600' : ''}`}>
             About Us
           </Link>
           <Link href="/mission" className={`hover:text-blue-600 transition-colors font-bold ${pathname === '/mission' ? 'text-blue-600' : ''}`}>

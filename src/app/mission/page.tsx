@@ -19,18 +19,17 @@ export default function MissionPage() {
       <div className="w-full">
         <div className="min-h-[80vh] flex flex-col md:flex-row">
           {/* Left side - Image */}
-          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] overflow-hidden">
-            <div className="absolute inset-4 md:inset-6 rounded-3xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-white/10 backdrop-blur-[1px] z-10" /> {/* Subtle blur overlay */}
+          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] overflow-hidden group">
+            <div className="absolute inset-4 md:inset-6 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 cursor-pointer">
               <Image
                 src="/dogfam2.jpg"
                 alt="Family bonding with their dog"
                 fill
                 style={{ objectFit: 'cover' }}
                 priority
-                className="object-center filter brightness-105 contrast-95"
+                className="object-center transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white md:hidden" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 md:hidden" />
             </div>
           </div>
 
@@ -60,38 +59,68 @@ export default function MissionPage() {
                   🎯 Our Vision
                 </div>
                 <h2 className={`${playfair.className} text-gray-800 text-3xl md:text-4xl leading-relaxed font-semibold`}>
-                  Through growth tracking, health organization, and meaningful updates—so every pet's journey is 
-                  <span className="text-blue-600"> documented, understood, and celebrated.</span>
+                  Empower ethical breeders and devoted pet owners to collaborate transparently through 
+                  <span className="text-blue-600"> growth tracking, health organization, and meaningful updates</span>
+                  —so every pet's journey is documented, understood, and celebrated.
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  We believe that transparency builds trust, and trust creates better outcomes for both breeders and pet owners. 
-                  Our platform provides the tools to make every interaction professional, organized, and meaningful.
+                  We believe that transparency builds trust, and trust creates better outcomes for pets, breeders, and families. 
+                  Our platform provides the tools to make every interaction professional, organized, and meaningful—from early weeks to lifelong care.
                 </p>
               </div>
 
               {/* Right side - Value Props */}
               <div className="space-y-8">
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">For Ethical Breeders</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Save time, present professionally, keep buyers engaged, and reduce repetitive questions 
-                    through organized updates and accessible data.
-                  </p>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">🐾 For Ethical Breeders</h3>
+                  <ul className="space-y-3 text-gray-600 leading-relaxed">
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-2">✓</span>
+                      <span><strong>Save time</strong> with bulk updates and automated timelines</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-2">✓</span>
+                      <span><strong>Present professionally</strong> with organized profiles and verified lineage</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-2">✓</span>
+                      <span><strong>Keep buyers engaged</strong> with ongoing updates and direct communication</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-2">✓</span>
+                      <span><strong>Reduce repetitive questions</strong> with accessible health and growth data</span>
+                    </li>
+                  </ul>
                 </div>
                 
-                <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">For Pet Owners</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Feel connected, informed, and reassured—with a living archive of your pet's early life 
-                    and ongoing care history.
-                  </p>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">❤️ For Pet Owners</h3>
+                  <ul className="space-y-3 text-gray-600 leading-relaxed">
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-2">✓</span>
+                      <span><strong>Feel connected</strong> with real-time updates and timeline access</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-2">✓</span>
+                      <span><strong>Stay informed</strong> with health records and weight tracking</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-2">✓</span>
+                      <span><strong>Feel reassured</strong> through direct breeder communication</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 mr-2">✓</span>
+                      <span><strong>Preserve memories</strong> with a living archive of your pet's early life</span>
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
-                  <h3 className="text-xl font-bold mb-4">Our Commitment</h3>
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white hover:shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+                  <h3 className="text-xl font-bold mb-4">✨ Our Commitment</h3>
                   <p className="leading-relaxed">
                     Professional, modern, trust-building, and growth-focused—centered on collaboration, 
-                    clarity, and care for every pet's journey.
+                    clarity, and care for every pet's journey. We're here to strengthen the bond between 
+                    ethical breeders and devoted pet owners through technology that serves both.
                   </p>
                 </div>
               </div>

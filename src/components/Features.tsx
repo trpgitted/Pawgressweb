@@ -6,40 +6,40 @@ export default function Features() {
   const features = [
     {
       icon: '\u{1F4CB}',
-      title: 'Rich Pet Profiles',
-      description: 'Create detailed profiles with photos, breed info, DOB, sex, weight tracking, hypoallergenic tags, and reservation status. Track complete lineage and parentage.',
+      title: 'Pet Profile Management',
+      description: 'Create rich profiles with photos, breed, DOB, sex, and reservation status. Group pets into litters, assign parentage, display verified lineage, plus weight tracking and medical record storage.',
       color: 'from-blue-100 to-indigo-100',
       iconBg: 'bg-blue-500',
       image: '/Pet-Profile.jpeg',
     },
     {
       icon: '\u{1F4F1}',
-      title: 'Pawgress Timeline',
-      description: 'Automatically build chronological galleries of growth with media and age stamps. Every update creates lasting memories.',
+      title: 'Media Timeline Auto-Build',
+      description: 'Every update you send automatically appears in the pet\'s Pawgress timeline. Build chronological galleries with media and age stamps for memory preservation.',
       color: 'from-purple-100 to-violet-100',
       iconBg: 'bg-purple-500',
       image: '/Pet-Timeline.jpeg',
     },
     {
       icon: '\u{1F517}',
-      title: 'Invite Links & Access',
-      description: 'Share unique links for each pet. Buyers join instantly to see their pet\'s timeline and dedicated chat conversations.',
+      title: 'Invite Links & Bulk Updates',
+      description: 'Share unique invite links for each pet—buyers join instantly. Send one update (text, photos, videos) to multiple pets or entire litters at once.',
       color: 'from-green-100 to-emerald-100',
       iconBg: 'bg-green-500',
       image: '/Pet-Profiles-Page.jpeg',
     },
     {
       icon: '\u{1F3E5}',
-      title: 'Health Records & Tracking',
-      description: 'Organize medical entries, vaccinations, vet visits, medications, and test results. Track weight trends over time.',
+      title: 'Health Records & Weight Tracking',
+      description: 'Add medical entries including vaccinations, vet visits, medications, and test results. Track weight trends over time for wellness monitoring.',
       color: 'from-red-100 to-pink-100',
       iconBg: 'bg-red-500',
       image: '/Medical-Records.jpeg',
     },
     {
       icon: '\u{1F4AC}',
-      title: 'Focused Communication',
-      description: 'One-to-one organized chats per pet keep conversations focused and buyers engaged throughout the journey.',
+      title: 'Secure Chat Per Pet',
+      description: 'One-to-one organized chats per pet keep conversations focused. Breeders and buyers communicate directly in dedicated, clean conversations tied to a single animal.',
       color: 'from-orange-100 to-amber-100',
       iconBg: 'bg-orange-500',
       image: '/Chat-Screen.jpeg',
@@ -47,7 +47,7 @@ export default function Features() {
     {
       icon: '\u{1F916}',
       title: 'AI Assistant (Astro)',
-      description: 'Ask general pet care questions or get pet-specific guidance with contextual information when available.',
+      description: 'Ask general pet care or pet-specific questions with context. Get instant guidance on training, health, nutrition, and behavior—powered by AI.',
       color: 'from-teal-100 to-cyan-100',
       iconBg: 'bg-teal-500',
       image: '/Astro.jpeg',
@@ -65,14 +65,15 @@ export default function Features() {
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-baloo">
             Everything You Need for{' '}
-            <span className="text-blue-600 relative">
-              Transparent Collaboration
+            <span className="text-blue-600 relative inline-block">
+              Professional Pet Care
               <svg 
-                className="absolute -bottom-2 left-0 w-full h-3 text-blue-200" 
-                viewBox="0 0 400 12" 
+                className="absolute -bottom-1 left-0 w-full h-2 text-blue-200" 
+                viewBox="0 0 400 8" 
                 fill="currentColor"
+                preserveAspectRatio="none"
               >
-                <path d="M0,6 Q200,0 400,6 L400,12 L0,12 Z" />
+                <path d="M0,4 Q200,0 400,4 L400,8 L0,8 Z" />
               </svg>
             </span>
           </h2>
@@ -92,16 +93,16 @@ export default function Features() {
             >
               {/* Feature Screenshot */}
               <div className="w-full lg:w-1/2">
-                <div className="group relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 transform hover:scale-105">
+                <div className="group relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 transform hover:scale-105 cursor-pointer">
                   {/* Decorative gradient blob */}
-                  <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full opacity-20 blur-3xl`}></div>
-                  <div className={`absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full opacity-20 blur-3xl`}></div>
+                  <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500`}></div>
+                  <div className={`absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500`}></div>
                   
                   <div className="relative p-4 sm:p-6 bg-gradient-to-br from-gray-50 to-white">
                     <img 
                       src={feature.image} 
                       alt={feature.title}
-                      className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-300"
+                      className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105"
                     />
                   </div>
                 </div>
