@@ -7,7 +7,7 @@ export default function Features() {
     {
       icon: '\u{1F4CB}',
       title: 'Pet Profile Management',
-      description: 'Create rich profiles with photos, breed, DOB, sex, and reservation status. Group pets into litters, assign parentage, display verified lineage, plus weight tracking and medical record storage.',
+      description: 'Create rich profiles with photos, breed, DOB, sex, and reservation status. Group pets into litters, assign parents, display verified lineage, plus weight tracking and medical record storage.',
       color: 'from-blue-100 to-indigo-100',
       iconBg: 'bg-blue-500',
       image: '/Pet-Profile.jpeg',

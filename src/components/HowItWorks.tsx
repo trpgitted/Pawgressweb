@@ -12,7 +12,7 @@ export default function HowItWorks() {
     {
       number: '02',
       title: 'Linked Pet Access',
-      description: 'View your pet\'s complete Pawgress timeline with photos, videos, and updates organized chronologically. Access health records, weight trends, and parentage information.',
+      description: 'View your pet\'s complete Pawgress timeline with photos, videos, and updates organized chronologically. Access health records, weight trends, and parent information.',
       icon: '\u{1F4F1}',
       color: 'from-purple-500 to-pink-600',
     },
@@ -29,7 +29,7 @@ export default function HowItWorks() {
     {
       number: '01',
       title: 'Pet Profile Management',
-      description: 'Create comprehensive pet profiles with photos, breed, DOB, sex, markings, microchip ID, and reservation status. Link litters and track parentage with verified lineage.',
+      description: 'Create comprehensive pet profiles with photos, breed, DOB, sex, markings, microchip ID, and reservation status. Link litters and track parents with verified lineage.',
       icon: '\u{1F4CB}',
       color: 'from-emerald-500 to-green-600',
     },
