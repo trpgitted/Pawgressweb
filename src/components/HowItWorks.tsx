@@ -244,14 +244,10 @@ export default function HowItWorks() {
               and preserve every pet's journey with transparency and care.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-full hover:bg-gray-50 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto">
-                Sign Up Free
-              </button>
-              
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg w-full sm:w-auto">
-                Learn More
-              </button>
+            <div className="flex justify-center">
+              <p className="text-lg sm:text-xl font-semibold opacity-90">
+                Continue below to learn more about our features →
+              </p>
             </div>
           </div>
         </div>

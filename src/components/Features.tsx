@@ -89,7 +89,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 xl:gap-16 items-center`}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 xl:gap-16 items-center border-2 border-gray-200 lg:border-0 rounded-3xl p-6 sm:p-8 lg:p-0 bg-gradient-to-br ${feature.color} lg:bg-none`}
             >
               {/* Feature Screenshot */}
               <div className="w-full lg:w-1/2">
