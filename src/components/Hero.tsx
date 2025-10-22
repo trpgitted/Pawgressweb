@@ -43,9 +43,9 @@ export default function Hero() {
           </div>
 
           {/* Desktop CTA */}
-          <button className="hidden sm:block bg-blue-600 text-white px-4 py-2 sm:px-6 rounded-full hover:bg-blue-700 transition-colors font-medium">
+          <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="hidden sm:block bg-blue-600 text-white px-4 py-2 sm:px-6 rounded-full hover:bg-blue-700 transition-colors font-medium">
             Sign Up
-          </button>
+          </a>
 
           {/* Mobile menu button */}
           <button
@@ -101,9 +101,9 @@ export default function Hero() {
               >
                 Mission
               </Link>
-              <button className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium">
+              <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium text-center block">
                 Sign Up
-              </button>
+              </a>
             </div>
           </div>
         )}
@@ -155,9 +155,9 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center">
                 Get Started Free
-              </button>
+              </a>
               <a href="#features" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold text-lg text-center">
                 Learn More
               </a>

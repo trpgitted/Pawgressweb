@@ -51,9 +51,9 @@ export default function SharedNav() {
         
         {/* Right side - Sign Up Button and Mobile Menu Button */}
         <div className="flex items-center gap-4">
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+          <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
             Sign Up
-          </button>
+          </a>
           
           {/* Mobile Menu Button */}
           <button 
@@ -111,9 +111,9 @@ export default function SharedNav() {
             >
               Our Mission
             </Link>
-            <button className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium">
+            <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium text-center block">
               Sign Up
-            </button>
+            </a>
           </div>
         </div>
       )}

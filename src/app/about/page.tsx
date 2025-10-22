@@ -209,10 +209,10 @@ export default function AboutPage() {
               relationships stronger.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/" className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors font-semibold text-lg">
+              <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors font-semibold text-lg text-center">
                 Get Started Today
-              </Link>
-              <Link href="/mission" className="bg-white text-blue-600 px-8 py-4 rounded-full hover:bg-gray-50 transition-colors font-semibold text-lg border-2 border-blue-600">
+              </a>
+              <Link href="/mission" className="bg-white text-blue-600 px-8 py-4 rounded-full hover:bg-gray-50 transition-colors font-semibold text-lg border-2 border-blue-600 text-center">
                 Learn More About Our Mission
               </Link>
             </div>
