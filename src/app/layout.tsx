@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Baloo_2 } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
@@ -19,11 +19,15 @@ const baloo = Baloo_2({
 export const metadata: Metadata = {
   title: "Pawgress - Connecting Ethical Breeders & Trusted Shelters",
   description: "The premier platform connecting responsible pet buyers with ethical breeders and trusted animal shelters. Find your perfect companion with complete health records and transparency.",
-  viewport: "width=device-width, initial-scale=1",
   icons: {
     icon: '/pawgress-logo.png',
     apple: '/pawgress-logo.png',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
