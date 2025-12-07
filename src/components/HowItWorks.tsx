@@ -216,7 +216,7 @@ export default function HowItWorks() {
                 <span>For Ethical Breeders</span>
               </div>
               <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 font-baloo mb-4 sm:mb-6 leading-tight">
-                Professional Tools for
+                Professional Tools for{' '}
                 <br className="hidden sm:block" />
                 <span className="bg-gradient-to-r from-emerald-500 via-orange-500 to-cyan-500 bg-clip-text text-transparent">
                   Modern Breeders
