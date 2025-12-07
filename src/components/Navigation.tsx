@@ -20,7 +20,7 @@ export default function Navigation() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img
-            src="/logo.png"
+            src="/pawgress-logo.png"
             alt="Pawgress Logo"
             style={{ width: '40px', height: '40px' }}
           />

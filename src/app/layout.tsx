@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Baloo_2 } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,7 +35,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${baloo.variable}`}>
       <body className="font-inter antialiased bg-white text-gray-900 overflow-x-hidden">
         <div className="min-h-screen flex flex-col">
-          {children}
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
         </div>
       </body>
     </html>

@@ -55,89 +55,87 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-32 bg-white" id="features">
-      <div className="container-responsive">
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50" id="features">
+      <div className="px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1800px] mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-          <div className="inline-flex items-center bg-blue-50 text-blue-600 px-4 py-2 sm:px-6 rounded-full text-sm font-semibold tracking-wide mb-6">
-            <span>✨</span> Why Choose Pawgress
+          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-blue-600 px-5 py-2.5 sm:px-7 sm:py-3 rounded-full text-sm sm:text-base font-semibold tracking-wide mb-6 sm:mb-8 shadow-lg shadow-blue-500/10 border border-blue-100">
+            <span className="text-lg sm:text-xl">✨</span>
+            <span>Why Choose Pawgress</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 font-baloo">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 font-baloo leading-tight">
             Everything You Need for{' '}
-            <span className="text-blue-600 relative inline-block">
+            <br className="hidden sm:block" />
+            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Professional Pet Care
-              <svg 
-                className="absolute -bottom-1 left-0 w-full h-2 text-blue-200" 
-                viewBox="0 0 400 8" 
-                fill="currentColor"
-                preserveAspectRatio="none"
-              >
-                <path d="M0,4 Q200,0 400,4 L400,8 L0,8 Z" />
-              </svg>
             </span>
           </h2>
           
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Our comprehensive platform connects ethical breeders and devoted pet owners through professional 
             tools for growth tracking, health organization, and meaningful communication.
           </p>
         </div>
 
         {/* Features Showcase - Alternating Layout */}
-        <div className="space-y-20 sm:space-y-24 lg:space-y-32 mb-16">
+        <div className="space-y-16 sm:space-y-20 lg:space-y-24 mb-16 sm:mb-20">
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 xl:gap-16 items-center border-2 border-gray-200 lg:border-0 rounded-3xl p-6 sm:p-8 lg:p-0 bg-gradient-to-br ${feature.color} lg:bg-none`}
+              className="group"
             >
-              {/* Feature Screenshot */}
-              <div className="w-full lg:w-1/2">
-                <div className="group relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 hover:border-blue-200 transition-all duration-500 transform hover:scale-105 cursor-pointer">
-                  {/* Decorative gradient blob */}
-                  <div className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500`}></div>
-                  <div className={`absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br ${feature.color} rounded-full opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500`}></div>
-                  
-                  <div className="relative p-4 sm:p-6 bg-gradient-to-br from-gray-50 to-white">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title}
-                      className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105"
-                    />
-                  </div>
-                </div>
-              </div>
+              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 xl:gap-16 items-center`}>
+                {/* Feature Screenshot */}
+                <div className="w-full lg:w-1/2">
+                  <div className="relative bg-gradient-to-br from-gray-50 to-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl shadow-gray-900/10 border border-gray-100/50 transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20">
+                    {/* Gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}></div>
+                    
+                    <div className="relative p-2 sm:p-4 md:p-6 lg:p-8">
+                      <img 
+                        src={feature.image} 
+                        alt={feature.title}
+                        className="w-full h-auto rounded-lg sm:rounded-xl lg:rounded-2xl shadow-lg transition-all duration-500 transform group-hover:scale-[1.02]"
+                      />
+                    </div>
 
-              {/* Content */}
-              <div className="w-full lg:w-1/2 space-y-6">
-                {/* Icon Badge */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${feature.color} rounded-2xl shadow-xl`}>
-                  <div className={`w-14 h-14 sm:w-16 sm:h-16 ${feature.iconBg} rounded-xl flex items-center justify-center text-white text-2xl sm:text-3xl`}>
-                    {feature.icon}
+                    {/* Decorative corner element */}
+                    <div className={`absolute top-0 ${index % 2 === 0 ? 'right-0' : 'left-0'} w-24 h-24 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-20 ${index % 2 === 0 ? 'rounded-bl-[3rem]' : 'rounded-br-[3rem]'} transition-opacity duration-500 pointer-events-none`}></div>
                   </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 font-baloo">
-                  {feature.title}
-                </h3>
+                {/* Content */}
+                <div className="w-full lg:w-1/2 space-y-4 sm:space-y-5 md:space-y-6">
+                  {/* Icon Badge */}
+                  <div className="inline-flex items-center justify-center">
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 bg-gradient-to-br ${feature.iconBg.replace('bg-', 'from-')} ${feature.iconBg.replace('bg-', 'to-')} rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl shadow-xl shadow-${feature.iconBg.split('-')[1]}-500/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
+                      {feature.icon}
+                    </div>
+                  </div>
 
-                {/* Description */}
-                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
+                  {/* Title */}
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 font-baloo leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
 
-                {/* Feature Highlights */}
-                <div className="flex flex-wrap gap-3 pt-4">
-                  <span className={`px-4 py-2 bg-gradient-to-r ${feature.color} rounded-full text-sm font-medium text-gray-700`}>
-                    Easy to Use
-                  </span>
-                  <span className={`px-4 py-2 bg-gradient-to-r ${feature.color} rounded-full text-sm font-medium text-gray-700`}>
-                    Real-time
-                  </span>
-                  <span className={`px-4 py-2 bg-gradient-to-r ${feature.color} rounded-full text-sm font-medium text-gray-700`}>
-                    Secure
-                  </span>
+                  {/* Description */}
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+
+                  {/* Feature Highlights */}
+                  <div className="flex flex-wrap gap-2 sm:gap-3 pt-2 sm:pt-4">
+                    <span className={`px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-r ${feature.color} rounded-full text-xs sm:text-sm md:text-base font-semibold text-gray-700 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5`}>
+                      Easy to Use
+                    </span>
+                    <span className={`px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-r ${feature.color} rounded-full text-xs sm:text-sm md:text-base font-semibold text-gray-700 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5`}>
+                      Real-time
+                    </span>
+                    <span className={`px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-r ${feature.color} rounded-full text-xs sm:text-sm md:text-base font-semibold text-gray-700 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5`}>
+                      Secure
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -145,57 +143,70 @@ export default function Features() {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 sm:p-12 lg:p-16 border border-blue-100">
-          <div className="max-w-3xl mx-auto">
+        <div className="relative bg-gradient-to-br from-blue-500/5 via-indigo-500/5 to-purple-500/5 rounded-3xl lg:rounded-[2.5rem] p-8 sm:p-12 lg:p-16 xl:p-20 backdrop-blur-sm border border-blue-100/50 overflow-hidden">
+          {/* Decorative background elements */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-indigo-500/10 to-transparent rounded-full blur-3xl"></div>
+          
+          <div className="relative max-w-4xl mx-auto text-center">
             {/* Main Image */}
-            <div className="mb-8 sm:mb-12 relative">
+            <div className="mb-10 sm:mb-12 lg:mb-16 relative">
               <div className="relative inline-block">
-                <img
-                  src="/dog fam1.jpg"
-                  alt="Happy family with their adopted pet"
-                  className="w-full max-w-md mx-auto rounded-2xl shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-300"
-                />
-                {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-300 rounded-full opacity-80 animate-bounce" style={{animationDelay: '0.5s'}}></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-pink-300 rounded-full opacity-80 animate-bounce" style={{animationDelay: '1s'}}></div>
+                <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl shadow-gray-900/20 transform hover:scale-105 transition-all duration-500">
+                  <img
+                    src="/dog fam1.jpg"
+                    alt="Happy family with their adopted pet"
+                    className="w-full max-w-lg mx-auto"
+                  />
+                </div>
+                {/* Decorative animated elements */}
+                <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full opacity-90 animate-bounce shadow-lg" style={{animationDelay: '0.5s'}}></div>
+                <div className="absolute -bottom-6 -left-6 w-10 h-10 bg-gradient-to-br from-pink-400 to-rose-400 rounded-full opacity-90 animate-bounce shadow-lg" style={{animationDelay: '1s'}}></div>
+                <div className="absolute top-1/2 -left-8 w-8 h-8 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full opacity-80 animate-pulse"></div>
+                <div className="absolute top-1/4 -right-8 w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full opacity-80 animate-pulse" style={{animationDelay: '0.7s'}}></div>
               </div>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 font-baloo">
-              Ready to Start Collaborating?
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 font-baloo leading-tight">
+              Ready to Start
+              <br className="sm:hidden" />
+              {' '}<span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Collaborating?
+              </span>
             </h3>
             
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-10 leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-10 sm:mb-12 lg:mb-14 leading-relaxed max-w-3xl mx-auto">
               Join ethical breeders and devoted pet owners who trust Pawgress to document, organize, and celebrate 
               every pet's journey with transparency and care.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-              <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto text-center">
-                Get Started Today
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16 lg:mb-20">
+              <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="group relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-lg sm:text-xl shadow-xl shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto text-center overflow-hidden">
+                <span className="relative z-10">Get Started Today</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               
               <Link 
                 href="/mission" 
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold text-lg inline-block w-full sm:w-auto text-center"
+                className="group relative border-2 border-blue-600 text-blue-600 px-8 sm:px-10 py-4 sm:py-5 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold text-lg sm:text-xl inline-block w-full sm:w-auto text-center overflow-hidden"
               >
-                Learn Our Mission
+                <span className="relative z-10">Learn Our Mission</span>
               </Link>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-blue-600 font-baloo">500+</div>
-                <div className="text-gray-600 font-medium">Ethical Breeders</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
+              <div className="text-center group">
+                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-baloo mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
+                <div className="text-base sm:text-lg text-gray-600 font-semibold">Ethical Breeders</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-blue-600 font-baloo">10K+</div>
-                <div className="text-gray-600 font-medium">Pet Journeys Documented</div>
+              <div className="text-center group">
+                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent font-baloo mb-2 group-hover:scale-110 transition-transform duration-300">10K+</div>
+                <div className="text-base sm:text-lg text-gray-600 font-semibold">Pet Journeys Documented</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-blue-600 font-baloo">98%</div>
-                <div className="text-gray-600 font-medium">Trust & Transparency</div>
+              <div className="text-center group">
+                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-baloo mb-2 group-hover:scale-110 transition-transform duration-300">98%</div>
+                <div className="text-base sm:text-lg text-gray-600 font-semibold">Trust & Transparency</div>
               </div>
             </div>
           </div>

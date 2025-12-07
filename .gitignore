@@ -10,6 +10,12 @@
 !.yarn/releases
 !.yarn/versions
 
+# next.js subdirectory
+next.js/node_modules/
+next.js/.next/
+next.js/out/
+next.js/package-lock.json
+
 # testing
 /coverage
 
