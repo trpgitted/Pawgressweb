@@ -60,6 +60,20 @@
 /* Smooth scrolling and better mobile handling */
 html {
   scroll-behavior: smooth;
+  /* Responsive base font size - smaller on mobile */
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
@@ -70,6 +84,68 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 1440px;
+}
+
+html {
+  zoom: 0.75;
+}
+
+@media (min-width: 1600px) {
+  html {
+    zoom: 1;
+  }
+}
+
+/* Scale content better on smaller screens */
+@media (max-width: 1023px) {
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  h3 {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Reduce padding on smaller screens */
+  .py-20, .py-24, .py-32 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  .px-6, .px-8, .px-12 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  /* Reduce gap spacing */
+  .gap-4, .gap-6, .gap-8, .gap-12, .gap-16, .gap-20 {
+    gap: 0.75rem !important;
+  }
+  
+  /* Reduce margin spacing */
+  .mt-8, .mt-12, .mt-16, .mb-8, .mb-12, .mb-16 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Scale down buttons */
+  button, .btn, a[class*="bg-"] {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* Reduce section spacing */
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
 }
 
 /* Continuous scroll animation */

@@ -28,6 +28,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  minimumScale: 0.5,
+  maximumScale: 2,
+  userScalable: true,
 };
 
 export default function RootLayout({
@@ -37,6 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${baloo.variable}`}>
+      <head>
+        <meta name="viewport" content="width=1440" />
+      </head>
       <body className="font-inter antialiased bg-white text-gray-900 overflow-x-hidden">
         <div className="min-h-screen flex flex-col">
           <main className="flex-grow">
