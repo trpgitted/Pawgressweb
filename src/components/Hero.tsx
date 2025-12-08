@@ -2,25 +2,15 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import SharedNav from './SharedNav';
 
 export default function Hero() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [translateX, setTranslateX] = useState(0);
-  const [isScrolled, setIsScrolled] = useState(false);
   const animationRef = useRef<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     if (!isDragging) {
@@ -101,117 +91,7 @@ export default function Hero() {
         </svg>
       </div>
       
-      {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-300 ${
-        isScrolled ? 'px-4 py-3 sm:px-6 sm:py-4' : 'px-4 py-6 sm:px-6 sm:py-8 lg:px-8'
-      }`}>
-        <div className="container-responsive flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-3 sm:gap-4">
-            <img
-              src="/pawgress-logo.png"
-              alt="Pawgress Logo"
-              className={`transition-all duration-300 ${
-                isScrolled ? 'w-8 h-8 sm:w-10 sm:h-10' : 'w-10 h-10 sm:w-14 sm:h-14'
-              }`}
-            />
-            <span className={`font-bold text-blue-600 font-baloo transition-all duration-300 ${
-              isScrolled ? 'text-xl sm:text-2xl' : 'text-2xl sm:text-3xl'
-            }`}>
-              Pawgress
-            </span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className={`hidden lg:flex items-center gap-8 text-gray-700 transition-all duration-300 ${
-            isScrolled ? 'text-base' : 'text-lg'
-          }`}>
-            <Link href="/" className="hover:text-blue-600 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="#buyers" className="hover:text-blue-600 transition-colors font-medium">
-              For Buyers
-            </Link>
-            <Link href="#breeders" className="hover:text-blue-600 transition-colors font-medium">
-              For Breeders
-            </Link>
-            <Link href="/about" className="hover:text-blue-600 transition-colors font-medium">
-              About
-            </Link>
-            <Link href="/mission" className="hover:text-blue-600 transition-colors font-medium">
-              Mission
-            </Link>
-          </div>
-
-          {/* Desktop CTA */}
-          <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className={`hidden sm:block relative bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 font-medium overflow-hidden group hover:scale-105 hover:shadow-lg ${
-            isScrolled ? 'px-5 py-2 sm:px-6 sm:py-2.5 text-base' : 'px-6 py-3 sm:px-8 sm:py-3 text-lg'
-          }`}>
-            <span className="relative z-10">Sign Up</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-          </a>
-
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-          >
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-40">
-            <div className="px-4 py-6 space-y-4">
-              <Link 
-                href="/" 
-                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link 
-                href="#buyers" 
-                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                For Buyers
-              </Link>
-              <Link 
-                href="#breeders" 
-                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                For Breeders
-              </Link>
-              <Link 
-                href="/about" 
-                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link 
-                href="/mission" 
-                className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Mission
-              </Link>
-              <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="block w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium text-center sm:hidden">
-                Sign Up
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
+      <SharedNav />
 
       {/* Hero Content */}
       <div className="relative z-20 px-6 sm:px-8 lg:px-12 xl:px-20 2xl:px-24 pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-16 lg:pb-24">

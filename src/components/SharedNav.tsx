@@ -16,6 +16,7 @@ export default function SharedNav() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,20 +60,48 @@ export default function SharedNav() {
           <Link href="/#breeders" className="hover:text-blue-600 transition-colors font-medium">
             For Breeders
           </Link>
-          <Link href="/about" className={`hover:text-blue-600 transition-colors font-medium ${pathname === '/about' ? 'text-blue-600' : ''}`}>
-            About
-          </Link>
-          <Link href="/mission" className={`hover:text-blue-600 transition-colors font-medium ${pathname === '/mission' ? 'text-blue-600' : ''}`}>
-            Mission
-          </Link>
+          
+          {/* About Dropdown */}
+          <div 
+            className="relative"
+            onMouseEnter={() => setAboutDropdownOpen(true)}
+            onMouseLeave={() => setAboutDropdownOpen(false)}
+          >
+            <button className={`hover:text-blue-600 transition-colors font-medium flex items-center gap-1 ${pathname === '/about' || pathname === '/mission' || pathname === '/terms' || pathname === '/privacy' ? 'text-blue-600' : ''}`}>
+              About
+              <svg className={`w-4 h-4 transition-transform duration-200 ${aboutDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            {/* Dropdown Menu */}
+            <div className={`absolute top-full left-0 pt-2 transition-all duration-200 origin-top ${aboutDropdownOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
+              <div className="w-48 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
+                <Link href="/about" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                  About Us
+                </Link>
+                <Link href="/mission" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                  Our Mission
+                </Link>
+                <Link href="/terms" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                  Terms of Service
+                </Link>
+                <Link href="/privacy" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                  Privacy Policy
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
         
         {/* Right side - Sign Up Button and Mobile Menu Button */}
         <div className="flex items-center gap-4">
-          <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className={`hidden sm:block bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 font-medium ${
+          <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className={`hidden sm:block relative bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 font-medium overflow-hidden group hover:scale-110 hover:shadow-2xl hover:-translate-y-1 ${
             isScrolled ? 'px-5 py-2 sm:px-6 sm:py-2.5 text-base' : 'px-6 py-3 sm:px-8 sm:py-3 text-lg'
           }`}>
-            Sign Up
+            <span className="relative z-10 group-hover:animate-pulse">Sign Up</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
           
           {/* Mobile Menu Button */}
@@ -117,20 +146,40 @@ export default function SharedNav() {
             >
               For Breeders
             </Link>
-            <Link 
-              href="/about" 
-              className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 ${pathname === '/about' ? 'text-blue-600' : ''}`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link 
-              href="/mission" 
-              className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 ${pathname === '/mission' ? 'text-blue-600' : ''}`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Mission
-            </Link>
+            
+            {/* About Section in Mobile */}
+            <div className="border-t border-gray-200 pt-4 mt-4">
+              <p className="text-sm font-semibold text-gray-500 mb-2 px-2">About</p>
+              <Link 
+                href="/about" 
+                className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 pl-4 ${pathname === '/about' ? 'text-blue-600' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link 
+                href="/mission" 
+                className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 pl-4 ${pathname === '/mission' ? 'text-blue-600' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Our Mission
+              </Link>
+              <Link 
+                href="/terms" 
+                className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 pl-4 ${pathname === '/terms' ? 'text-blue-600' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Terms of Service
+              </Link>
+              <Link 
+                href="/privacy" 
+                className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 pl-4 ${pathname === '/privacy' ? 'text-blue-600' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Privacy Policy
+              </Link>
+            </div>
+            
             <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="block w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium text-center sm:hidden">
               Sign Up
             </a>

@@ -80,10 +80,7 @@ export default function MissionPage() {
 
               {/* Right side - Value Props */}
               <div className="space-y-6 lg:col-span-2">
-                <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden">
-                  {/* Decorative corner */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/5 to-transparent rounded-bl-3xl group-hover:scale-110 transition-transform duration-500"></div>
-                  
+                <div className="group relative backdrop-blur-sm bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                   <div className="relative z-10">
                     <div className="flex items-center mb-4 sm:mb-6">
                       <span className="text-3xl sm:text-4xl mr-2 sm:mr-3 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🐾</span>
@@ -110,10 +107,7 @@ export default function MissionPage() {
                   </div>
                 </div>
                 
-                <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden">
-                  {/* Decorative corner */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/5 to-transparent rounded-bl-3xl group-hover:scale-110 transition-transform duration-500"></div>
-                  
+                <div className="group relative backdrop-blur-sm bg-gradient-to-br from-green-50 to-white border border-green-100 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                   <div className="relative z-10">
                     <div className="flex items-center mb-4 sm:mb-6">
                       <span className="text-3xl sm:text-4xl mr-2 sm:mr-3 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">❤️</span>

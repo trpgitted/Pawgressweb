@@ -87,8 +87,7 @@ export default function AboutPage() {
 
             {/* Three Pillars */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-              <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/5 to-transparent rounded-bl-3xl group-hover:scale-110 transition-transform duration-500"></div>
+              <div className="group relative backdrop-blur-sm bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="relative z-10">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">💬</div>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3 sm:mb-4">Communication First</h3>
@@ -100,8 +99,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/5 to-transparent rounded-bl-3xl group-hover:scale-110 transition-transform duration-500"></div>
+              <div className="group relative backdrop-blur-sm bg-gradient-to-br from-green-50 to-white border border-green-100 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="relative z-10">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🎯</div>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-3 sm:mb-4">User-Friendly Design</h3>
@@ -113,8 +111,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/5 to-transparent rounded-bl-3xl group-hover:scale-110 transition-transform duration-500"></div>
+              <div className="group relative backdrop-blur-sm bg-gradient-to-br from-purple-50 to-white border border-purple-100 rounded-3xl p-8 sm:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="relative z-10">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">🤝</div>
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3 sm:mb-4">Relationship Focused</h3>
@@ -200,29 +197,25 @@ export default function AboutPage() {
                 lay the groundwork for a lifetime. During this critical period, clear communication ensures:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-left">
-                <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer overflow-hidden">
-                  <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-500/5 to-transparent rounded-bl-2xl group-hover:scale-110 transition-transform duration-500"></div>
+                <div className="group relative backdrop-blur-sm bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative z-10">
                     <h4 className="font-bold text-gray-900 mb-2 sm:mb-3 text-lg sm:text-xl">✓ Informed Decisions</h4>
                     <p className="text-gray-600 text-base sm:text-lg">Pet owners can make confident choices with complete visibility into their pet's early life.</p>
                   </div>
                 </div>
-                <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer overflow-hidden">
-                  <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-green-500/5 to-transparent rounded-bl-2xl group-hover:scale-110 transition-transform duration-500"></div>
+                <div className="group relative backdrop-blur-sm bg-gradient-to-br from-green-50 to-white border border-green-100 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative z-10">
                     <h4 className="font-bold text-gray-900 mb-2 sm:mb-3 text-lg sm:text-xl">✓ Trust & Transparency</h4>
                     <p className="text-gray-600 text-base sm:text-lg">Open communication builds lasting relationships based on honesty and mutual respect.</p>
                   </div>
                 </div>
-                <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer overflow-hidden">
-                  <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-purple-500/5 to-transparent rounded-bl-2xl group-hover:scale-110 transition-transform duration-500"></div>
+                <div className="group relative backdrop-blur-sm bg-gradient-to-br from-purple-50 to-white border border-purple-100 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative z-10">
                     <h4 className="font-bold text-gray-900 mb-2 sm:mb-3 text-lg sm:text-xl">✓ Better Care</h4>
                     <p className="text-gray-600 text-base sm:text-lg">Breeders can share critical health information, ensuring seamless transitions and ongoing wellness.</p>
                   </div>
                 </div>
-                <div className="group relative backdrop-blur-sm bg-white/80 border border-white/50 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer overflow-hidden">
-                  <div className="absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-orange-500/5 to-transparent rounded-bl-2xl group-hover:scale-110 transition-transform duration-500"></div>
+                <div className="group relative backdrop-blur-sm bg-gradient-to-br from-orange-50 to-white border border-orange-100 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer">
                   <div className="relative z-10">
                     <h4 className="font-bold text-gray-900 mb-2 sm:mb-3 text-lg sm:text-xl">✓ Lasting Connections</h4>
                     <p className="text-gray-600 text-base sm:text-lg">Strong breeder-owner relationships continue long after adoption, supporting pets throughout their lives.</p>
