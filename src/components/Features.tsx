@@ -79,13 +79,27 @@ export default function Features() {
         </div>
 
         {/* Features Showcase - Alternating Layout */}
-        <div className="space-y-16 sm:space-y-20 lg:space-y-24 mb-16 sm:mb-20">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-24 mb-16 sm:mb-20">
           {features.map((feature, index) => (
             <div
               key={index}
               className="group"
             >
-              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 xl:gap-16 items-center`}>
+              {/* Mobile separator between features */}
+              {index > 0 && (
+                <div className="lg:hidden mb-8 sm:mb-10">
+                  <div className="relative">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t-2 border-gray-200"></div>
+                    </div>
+                    <div className="relative flex justify-center">
+                      <span className="bg-gradient-to-b from-white to-gray-50 px-4 text-sm text-gray-400 font-semibold">✦</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+              
+              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 sm:gap-8 lg:gap-12 xl:gap-16 items-center p-4 sm:p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/50 lg:bg-transparent border-2 lg:border-0 border-gray-100`}>
                 {/* Feature Screenshot */}
                 <div className="w-full lg:w-1/2">
                   <div className="relative bg-gradient-to-br from-gray-50 to-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl shadow-gray-900/10 border border-gray-100/50 transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20">
