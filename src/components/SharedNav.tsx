@@ -60,6 +60,9 @@ export default function SharedNav() {
           <Link href="/#breeders" className="hover:text-blue-600 transition-colors font-medium">
             For Breeders
           </Link>
+          <Link href="/#features" className="hover:text-blue-600 transition-colors font-medium">
+            Features
+          </Link>
           
           {/* About Dropdown */}
           <div 
@@ -145,6 +148,13 @@ export default function SharedNav() {
               onClick={() => setMobileMenuOpen(false)}
             >
               For Breeders
+            </Link>
+            <Link 
+              href="/#features" 
+              className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Features
             </Link>
             
             {/* About Section in Mobile */}
