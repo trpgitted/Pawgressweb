@@ -105,7 +105,7 @@ export default function Hero() {
             </div>
 
             {/* Heading */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 md:mb-8 font-baloo">
+            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 md:mb-8 font-baloo">
               <span className="bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent">Empowering </span>
               <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 Ethical Breeders

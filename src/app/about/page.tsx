@@ -29,7 +29,6 @@ export default function AboutPage() {
                 priority
                 className="object-center transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 md:hidden" />
             </div>
           </div>
 
