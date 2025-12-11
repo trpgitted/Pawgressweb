@@ -16,10 +16,10 @@ export default function MissionPage() {
     <main className="relative min-h-screen w-full bg-gradient-to-b from-blue-50 via-indigo-50/30 to-white">
       <SharedNav />
       <div className="w-full pt-24 sm:pt-28 lg:pt-32">
-        <div className="min-h-[80vh] flex flex-col md:flex-row">
+        <div className="min-h-[60vh] md:min-h-[80vh] flex flex-col md:flex-row">
           {/* Left side - Image */}
-          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] overflow-hidden group">
-            <div className="absolute inset-4 md:inset-6 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 cursor-pointer border border-white/50">
+          <div className="relative w-full md:w-1/2 h-[35vh] md:h-[80vh] overflow-hidden group">
+            <div className="absolute inset-8 md:inset-6 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 cursor-pointer border border-white/50">
               <Image
                 src="/Mission image.png"
                 alt="Family bonding with their dog"
@@ -32,7 +32,7 @@ export default function MissionPage() {
           </div>
 
           {/* Right side - Minimalistic Text */}
-          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] flex items-center justify-center px-6 md:px-16 lg:px-20 xl:px-24">
+          <div className="relative w-full md:w-1/2 h-[35vh] md:h-[80vh] flex items-center justify-center px-6 md:px-16 lg:px-20 xl:px-24">
             <div className="w-full max-w-4xl">
               {/* Glass-morphism badge */}
               <div className="inline-flex items-center backdrop-blur-sm bg-white/80 border border-white/50 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-semibold mb-3 sm:mb-4 md:mb-6 shadow-lg hover:shadow-xl transition-all duration-300">
@@ -40,13 +40,22 @@ export default function MissionPage() {
               </div>
               
               <h1 className={`tracking-tight font-baloo`}>
-                <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight font-bold">
+                <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight font-bold">
                   <span className="bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent">
                     Empowering breeders and pet owners to 
                   </span>
                   <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent"> collaborate transparently</span>
                 </span>
               </h1>
+            </div>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div className="animate-bounce">
+              <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
             </div>
           </div>
         </div>
