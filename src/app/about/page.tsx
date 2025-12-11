@@ -17,10 +17,11 @@ export default function AboutPage() {
       
       <div className="w-full pt-24 sm:pt-28 lg:pt-32">
         {/* Hero Section */}
-        <div className="min-h-[80vh] flex flex-col md:flex-row">
+        <div className="min-h-[60vh] md:min-h-[80vh] flex flex-col md:flex-row relative overflow-hidden">
+
           {/* Left side - Image */}
-          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] overflow-hidden group">
-            <div className="absolute inset-4 md:inset-6 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 cursor-pointer border border-white/50">
+          <div className="relative w-full md:w-1/2 h-[35vh] md:h-[80vh] overflow-hidden group">
+            <div className="absolute inset-0 md:inset-6 md:rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 cursor-pointer md:border md:border-white/50">
               <Image
                 src="/about page image.jpg"
                 alt="Happy family with their pet"
@@ -33,11 +34,23 @@ export default function AboutPage() {
           </div>
 
           {/* Right side - Headline */}
-          <div className="relative w-full md:w-1/2 h-[50vh] md:h-[80vh] flex items-center justify-center px-6 md:px-16 lg:px-20 xl:px-24">
-            <div className="w-full max-w-4xl">
-              {/* Glass-morphism badge */}
-              <div className="inline-flex items-center backdrop-blur-sm bg-white/80 border border-white/50 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-semibold mb-3 sm:mb-4 md:mb-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">✨ About Us</span>
+          <div className="relative w-full md:w-1/2 h-[35vh] md:h-[80vh] flex items-center justify-center px-6 md:px-16 lg:px-20 xl:px-24">
+            <div className="w-full max-w-4xl text-center">
+              {/* Glass-morphism badge with paws */}
+              <div className="relative inline-block mb-3 sm:mb-4 md:mb-6">
+                <div className="absolute -left-16 sm:-left-24 md:-left-32 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 animate-paw-fade" style={{animationDelay: '0s', transform: 'translateY(-50%) rotate(-15deg)'}}>
+                  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#9333EA" d="M226.5 92.9c14.3 42.9-.3 86.2-32.6 96.8s-70.1-15.6-84.4-58.5s.3-86.2 32.6-96.8s70.1 15.6 84.4 58.5zM100.4 198.6c18.9 32.4 14.3 70.1-10.2 84.1s-59.7-.9-78.5-33.3S-2.7 179.3 21.8 165.3s59.7 .9 78.5 33.3zM69.2 401.2C121.6 259.9 214.7 224 256 224s134.4 35.9 186.8 177.2c3.6 9.7 5.2 20.1 5.2 30.5v1.6c0 25.8-20.9 46.7-46.7 46.7c-11.5 0-22.9-1.4-34-4.2l-88-22c-15.3-3.8-31.3-3.8-46.6 0l-88 22c-11.1 2.8-22.5 4.2-34 4.2C84.9 480 64 459.1 64 433.3v-1.6c0-10.4 1.6-20.8 5.2-30.5zM421.8 282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3 78.5-33.3s29.1 51.7 10.2 84.1s-54 47.3-78.5 33.3zM310.1 189.7c-32.3-10.6-46.9-53.9-32.6-96.8s52.1-69.1 84.4-58.5s46.9 53.9 32.6 96.8s-52.1 69.1-84.4 58.5z"/>
+                  </svg>
+                </div>
+                <div className="inline-flex items-center backdrop-blur-sm bg-white/80 border border-white/50 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">✨ About Us</span>
+                </div>
+                <div className="absolute -right-16 sm:-right-24 md:-right-32 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 animate-paw-fade" style={{animationDelay: '0.5s', transform: 'translateY(-50%) rotate(15deg)'}}>
+                  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#EC4899" d="M226.5 92.9c14.3 42.9-.3 86.2-32.6 96.8s-70.1-15.6-84.4-58.5s.3-86.2 32.6-96.8s70.1 15.6 84.4 58.5zM100.4 198.6c18.9 32.4 14.3 70.1-10.2 84.1s-59.7-.9-78.5-33.3S-2.7 179.3 21.8 165.3s59.7 .9 78.5 33.3zM69.2 401.2C121.6 259.9 214.7 224 256 224s134.4 35.9 186.8 177.2c3.6 9.7 5.2 20.1 5.2 30.5v1.6c0 25.8-20.9 46.7-46.7 46.7c-11.5 0-22.9-1.4-34-4.2l-88-22c-15.3-3.8-31.3-3.8-46.6 0l-88 22c-11.1 2.8-22.5 4.2-34 4.2C84.9 480 64 459.1 64 433.3v-1.6c0-10.4 1.6-20.8 5.2-30.5zM421.8 282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3 78.5-33.3s29.1 51.7 10.2 84.1s-54 47.3-78.5 33.3zM310.1 189.7c-32.3-10.6-46.9-53.9-32.6-96.8s52.1-69.1 84.4-58.5s46.9 53.9 32.6 96.8s-52.1 69.1-84.4 58.5z"/>
+                  </svg>
+                </div>
               </div>
               
               <h1 className="tracking-tight font-baloo">
@@ -48,6 +61,15 @@ export default function AboutPage() {
                   <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">devoted pet owners</span>
                 </span>
               </h1>
+
+              {/* Scroll indicator */}
+              <div className="mt-8 flex justify-center">
+                <div className="animate-bounce">
+                  <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
