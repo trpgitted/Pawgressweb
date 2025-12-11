@@ -16,7 +16,7 @@ export default function MissionPage() {
     <main className="relative min-h-screen w-full bg-gradient-to-b from-blue-50 via-indigo-50/30 to-white">
       <SharedNav />
       <div className="w-full pt-24 sm:pt-28 lg:pt-32">
-        <div className="min-h-[60vh] md:min-h-[80vh] flex flex-col md:flex-row relative overflow-hidden">
+        <div className="flex flex-col md:flex-row relative overflow-hidden">
 
           {/* Left side - Image */}
           <div className="relative w-full md:w-1/2 h-[35vh] md:h-[80vh] overflow-hidden group">
