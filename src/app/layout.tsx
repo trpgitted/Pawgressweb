@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${baloo.variable}`}>
-      <body className="font-inter antialiased bg-white text-gray-900 overflow-x-hidden">
+      <body className="font-inter antialiased bg-white text-gray-900">
         <div className="min-h-screen flex flex-col">
           <main className="flex-grow">
             {children}

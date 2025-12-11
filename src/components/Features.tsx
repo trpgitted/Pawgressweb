@@ -55,8 +55,8 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50" id="features">
-      <div className="px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1800px] mx-auto">
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50 overflow-visible" id="features">
+      <div className="px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1800px] mx-auto overflow-visible">
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-blue-600 px-5 py-2.5 sm:px-7 sm:py-3 rounded-full text-sm sm:text-base font-semibold tracking-wide mb-6 sm:mb-8 shadow-lg shadow-blue-500/10 border border-blue-100">
@@ -88,12 +88,14 @@ export default function Features() {
               {/* Mobile separator between features */}
               {index > 0 && (
                 <div className="lg:hidden mb-8 sm:mb-10">
-                  <div className="relative">
-                    <div className="absolute inset-0 flex items-center">
-                      <div className="w-full border-t-2 border-gray-200"></div>
-                    </div>
-                    <div className="relative flex justify-center">
-                      <span className="bg-gradient-to-b from-white to-gray-50 px-4 text-sm text-gray-400 font-semibold">✦</span>
+                  <div className="absolute left-0 right-0 w-full">
+                    <div className="relative">
+                      <div className="absolute inset-0 flex items-center">
+                        <div className="w-full border-t-2 border-gray-200"></div>
+                      </div>
+                      <div className="relative flex justify-center">
+                        <span className="bg-gradient-to-b from-white to-gray-50 px-4 text-sm text-gray-400 font-semibold">✦</span>
+                      </div>
                     </div>
                   </div>
                 </div>

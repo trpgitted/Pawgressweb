@@ -178,11 +178,11 @@ export default function Hero() {
         </div>
 
         {/* Wide Animated Feature Carousel - Spans full width below grid */}
-        <div className="mt-12 sm:mt-16 lg:mt-20">
+        <div className="mt-12 sm:mt-16 lg:mt-20 -mx-6 sm:-mx-8 lg:-mx-12 xl:-mx-20 2xl:-mx-24">
           <div className="rounded-3xl transition-transform duration-300 hover:scale-105 overflow-hidden">
             {/* Carousel Container - Continuous infinite scroll */}
             <div 
-              className="relative h-32 sm:h-40 lg:h-48 flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing px-4 sm:px-8 lg:px-12 pt-4 sm:pt-6 lg:pt-8 pb-12 sm:pb-14 lg:pb-16"
+              className="relative h-32 sm:h-40 lg:h-48 flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing pt-4 sm:pt-6 lg:pt-8 pb-12 sm:pb-14 lg:pb-16"
               onMouseDown={(e) => {
                 setIsDragging(true);
                 setStartX(e.clientX);
