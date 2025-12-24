@@ -1,8 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
+import ComingSoonPopup from './ComingSoonPopup';
 
 export default function Footer() {
+  const [showPopup, setShowPopup] = useState(false);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -60,9 +63,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <button onClick={() => setShowPopup(true)} className="text-gray-400 hover:text-blue-400 transition-colors">
                   Sign Up
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -105,6 +108,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      
+      <ComingSoonPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
     </footer>
   );
 }

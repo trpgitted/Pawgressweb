@@ -4,6 +4,7 @@ import { Baloo_2 } from 'next/font/google';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ComingSoonPopup from './ComingSoonPopup';
 
 const baloo = Baloo_2({
   subsets: ['latin'],
@@ -17,6 +18,7 @@ export default function SharedNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,13 +101,13 @@ export default function SharedNav() {
         
         {/* Right side - Sign Up Button and Mobile Menu Button */}
         <div className="flex items-center gap-4">
-          <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className={`hidden sm:block relative bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 font-medium overflow-hidden group hover:scale-110 hover:shadow-2xl hover:-translate-y-1 ${
+          <button onClick={() => setShowPopup(true)} className={`hidden sm:block relative bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 font-medium overflow-hidden group hover:scale-110 hover:shadow-2xl hover:-translate-y-1 ${
             isScrolled ? 'px-5 py-2 sm:px-6 sm:py-2.5 text-base' : 'px-6 py-3 sm:px-8 sm:py-3 text-lg'
           }`}>
             <span className="relative z-10 group-hover:animate-pulse">Sign Up</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </a>
+          </button>
           
           {/* Mobile Menu Button */}
           <button 
@@ -190,12 +192,14 @@ export default function SharedNav() {
               </Link>
             </div>
             
-            <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="block w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium text-center sm:hidden">
+            <button onClick={() => setShowPopup(true)} className="block w-full mt-4 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium text-center sm:hidden">
               Sign Up
-            </a>
+            </button>
           </div>
         </div>
       )}
+      
+      <ComingSoonPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
     </nav>
   );
 }

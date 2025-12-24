@@ -1,6 +1,10 @@
 'use client';
 
+import { useState } from 'react';
+import ComingSoonPopup from './ComingSoonPopup';
+
 export default function HowItWorks() {
+  const [showPopup, setShowPopup] = useState(false);
   const buyerSteps = [
     {
       number: '01',
@@ -382,15 +386,13 @@ export default function HowItWorks() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 sm:mb-16">
-              <a 
-                href="https://pawgress.ai" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <button
+                onClick={() => setShowPopup(true)}
                 className="group relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-lg sm:text-xl shadow-xl shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto text-center overflow-hidden"
               >
-                <span className="relative z-10">Start Your Free Trial</span>
+                <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
+              </button>
               
               <button
                 onClick={() => {

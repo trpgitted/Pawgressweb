@@ -3,12 +3,14 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import SharedNav from './SharedNav';
+import ComingSoonPopup from './ComingSoonPopup';
 
 export default function Hero() {
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [translateX, setTranslateX] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
   const animationRef = useRef<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -123,10 +125,10 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-6 justify-start">
-              <a href="https://pawgress.ai" target="_blank" rel="noopener noreferrer" className="relative bg-blue-600 text-white px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full hover:bg-blue-700 transition-all duration-300 font-semibold text-base sm:text-lg md:text-xl lg:text-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 text-center overflow-hidden group animate-button-pulse">
+              <button onClick={() => setShowPopup(true)} className="relative bg-blue-600 text-white px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full hover:bg-blue-700 transition-all duration-300 font-semibold text-base sm:text-lg md:text-xl lg:text-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 text-center overflow-hidden group animate-button-pulse">
                 <span className="relative z-10">Get Started Free</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-              </a>
+              </button>
               <a href="#features" className="border-2 border-blue-600 text-blue-600 px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-center">
                 Learn More
               </a>
@@ -253,6 +255,8 @@ export default function Hero() {
           </svg>
         </div>
       </div>
+      
+      <ComingSoonPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
     </section>
   );
 }
