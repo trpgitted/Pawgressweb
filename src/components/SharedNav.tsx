@@ -44,9 +44,14 @@ export default function SharedNav() {
               }`}
             />
           </Link>
-          <Link href="/" className={`font-bold text-blue-600 transition-all duration-300 ${
-            isScrolled ? 'text-xl sm:text-2xl' : 'text-2xl sm:text-3xl'
-          }`}>Pawgress</Link>
+          <div className="flex flex-col">
+            <Link href="/" className={`font-bold text-blue-600 transition-all duration-300 leading-tight ${
+              isScrolled ? 'text-xl sm:text-2xl' : 'text-2xl sm:text-3xl'
+            }`}>Pawgress</Link>
+            <span className={`text-gray-500 transition-all duration-300 ${
+              isScrolled ? 'text-[10px] sm:text-xs' : 'text-xs sm:text-sm'
+            }`}>by Timelines, LLC</span>
+          </div>
         </div>
         
         {/* Desktop Navigation */}

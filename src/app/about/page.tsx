@@ -96,7 +96,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 sm:space-y-6 text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed">
                 <p>
-                  At Pawgress, we dedicate ourselves to improving the buyer-breeder relationship through smooth, 
+                  At Pawgress, operated by <strong className="text-blue-600">Timelines, LLC</strong>, we dedicate ourselves to improving the buyer-breeder relationship through smooth, 
                   user-friendly interfaces that streamline connection between breeders and multiple buyers. 
                   We understand that bringing a new pet into your family is one of life's most meaningful decisions, 
                   and transparency should never be an afterthought.

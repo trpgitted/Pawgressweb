@@ -24,9 +24,12 @@ export default function Footer() {
                 Pawgress
               </span>
             </div>
-            <p className="text-gray-400 max-w-md mb-6">
+            <p className="text-gray-400 max-w-md mb-4">
               Connecting ethical breeders and trusted shelters with loving families. 
               Find your perfect companion with complete transparency and health records.
+            </p>
+            <p className="text-gray-400 max-w-md mb-6 text-sm">
+              <strong className="text-gray-300">Pawgress</strong> is operated by <strong className="text-gray-300">Timelines, LLC</strong>
             </p>
             <div className="flex gap-4">
               {/* Social Media Icons */}
@@ -95,9 +98,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
-            © {currentYear} Pawgress. All rights reserved.
-          </p>
+          <div className="flex flex-col items-center sm:items-start gap-2">
+            <p className="text-gray-400 text-sm font-medium">
+              Pawgress is a registered trade name of Timelines, LLC.
+            </p>
+            <p className="text-gray-500 text-sm">
+              © {currentYear} Pawgress. All rights reserved.
+            </p>
+          </div>
           <div className="flex gap-6 text-sm">
             <Link href="/privacy" className="text-gray-500 hover:text-blue-400 transition-colors">
               Privacy Policy
