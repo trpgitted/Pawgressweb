@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Baloo_2 } from 'next/font/google';
 import SharedNav from '@/components/SharedNav';
 import Footer from '@/components/Footer';
+import ComingSoonPopup from '@/components/ComingSoonPopup';
 
 const baloo = Baloo_2({
   subsets: ['latin'],
@@ -14,6 +15,7 @@ const baloo = Baloo_2({
 
 export default function FAQPage() {
   const [openItems, setOpenItems] = useState<string[]>([]);
+  const [showPopup, setShowPopup] = useState(false);
 
   const toggleItem = (id: string) => {
     setOpenItems(prev => 
@@ -121,8 +123,9 @@ export default function FAQPage() {
                 {isOpen('general-3') && (
                   <div className="px-6 pb-6">
                     <p className="text-gray-600 leading-relaxed">
-                      Buyers can use Pawgress completely free. Breeders have a free plan with basic features (up to 3 pets), 
-                      and paid plans starting at $29/month for unlimited pets and advanced features.
+                      Yes! Pawgress is completely free for all pet buyers and owners. For breeders, Pawgress is currently free 
+                      during the beta period. After beta, breeders will have subscription-based pricing that scales with the size 
+                      of their operation, with no commissions or sales cuts ever taken.
                     </p>
                   </div>
                 )}
@@ -149,6 +152,58 @@ export default function FAQPage() {
                       Unlike social media where messages get buried and conversations get lost, Pawgress keeps everything organized by pet. 
                       Updates automatically appear in the right timelines, chats stay connected to specific pets, and nothing gets mixed up 
                       or pushed out of view.
+                    </p>
+                  </div>
+                )}
+              </div>
+              
+              <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleItem('general-6')}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                >
+                  <h3 className="text-xl font-bold text-gray-900">Is Pawgress private and secure?</h3>
+                  <svg
+                    className={`w-6 h-6 text-blue-600 transition-transform duration-300 ${isOpen('general-6') ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isOpen('general-6') && (
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600 leading-relaxed">
+                      Yes. Pet timelines and chats are private by default and only accessible to invited users. Breeders control who can 
+                      view each pet's information. All data is encrypted and stored securely, and we never sell or share your information 
+                      with third parties.
+                    </p>
+                  </div>
+                )}
+              </div>
+              
+              <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleItem('general-7')}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                >
+                  <h3 className="text-xl font-bold text-gray-900">Does Pawgress support ethical breeding?</h3>
+                  <svg
+                    className={`w-6 h-6 text-blue-600 transition-transform duration-300 ${isOpen('general-7') ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isOpen('general-7') && (
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600 leading-relaxed">
+                      Absolutely. Pawgress was built specifically to support responsible, transparent breeding practices. Our platform 
+                      encourages thorough record-keeping, open communication, and lifelong connections between breeders and pet owners. 
+                      We believe ethical breeding is about transparency, care, and commitment to each animal's well-being.
                     </p>
                   </div>
                 )}
@@ -288,6 +343,58 @@ export default function FAQPage() {
                   </div>
                 )}
               </div>
+              
+              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleItem('breeders-6')}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                >
+                  <h3 className="text-xl font-bold text-gray-900">What happens to a pet's profile after it's linked to a buyer?</h3>
+                  <svg
+                    className={`w-6 h-6 text-blue-600 transition-transform duration-300 ${isOpen('breeders-6') ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isOpen('breeders-6') && (
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600 leading-relaxed">
+                      When you transfer a pet to a buyer, they gain full ownership of the profile. You'll maintain access to view the 
+                      timeline and can continue to see updates if the buyer chooses to share them with you. This allows you to stay 
+                      connected with the pets you've raised throughout their lives.
+                    </p>
+                  </div>
+                )}
+              </div>
+              
+              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleItem('breeders-7')}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                >
+                  <h3 className="text-xl font-bold text-gray-900">How is communication organized?</h3>
+                  <svg
+                    className={`w-6 h-6 text-blue-600 transition-transform duration-300 ${isOpen('breeders-7') ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isOpen('breeders-7') && (
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600 leading-relaxed">
+                      Communication in Pawgress is organized around each individual pet. Each pet has its own dedicated chat thread 
+                      where you can message buyers, share photos, and coordinate pickups. You can also create litter groups to 
+                      communicate with multiple buyers at once.
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -319,7 +426,8 @@ export default function FAQPage() {
                   <div className="px-6 pb-6">
                     <p className="text-gray-600 leading-relaxed">
                       Your breeder will send you an invitation link via email or text. Click the link, create your free account, 
-                      and you'll be instantly connected to your pet's timeline.
+                      and you'll be instantly connected to your pet's timeline. You can also express interest in a pet directly 
+                      in the app or enter a pet-specific invite code to connect to your pet.
                     </p>
                   </div>
                 )}
@@ -400,12 +508,30 @@ export default function FAQPage() {
                 )}
               </div>
               
-              <div className="bg-gradient-to-r from-purple-50 to-white p-8 rounded-xl shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Do I need to pay anything as a buyer?</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  No! Pawgress is completely free for all pet buyers and owners. You get unlimited access to your pet's timeline, 
-                  chat, and all features at no cost.
-                </p>
+              <div className="bg-gradient-to-r from-purple-50 to-white rounded-xl shadow-md overflow-hidden">
+                <button
+                  onClick={() => toggleItem('buyers-5')}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-purple-100 transition-colors"
+                >
+                  <h3 className="text-xl font-bold text-gray-900">What happens after pickup?</h3>
+                  <svg
+                    className={`w-6 h-6 text-purple-600 transition-transform duration-300 ${isOpen('buyers-5') ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isOpen('buyers-5') && (
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600 leading-relaxed">
+                      After pickup, your pet's timeline continues! You can keep adding updates, photos, and milestones. If you choose, 
+                      you can share updates with your breeder to keep them connected to your pet's journey. The timeline becomes a 
+                      lifelong record of your pet's life.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -423,7 +549,7 @@ export default function FAQPage() {
             <a href="mailto:dev@pawgressapp.com" className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-50 transition-colors">
               Contact Support
             </a>
-            <button className="bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-800 transition-colors border-2 border-white">
+            <button onClick={() => setShowPopup(true)} className="bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-800 transition-colors border-2 border-white">
               Get Started Free
             </button>
           </div>
@@ -431,6 +557,7 @@ export default function FAQPage() {
       </section>
 
       <Footer />
+      <ComingSoonPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
     </main>
   );
 }
