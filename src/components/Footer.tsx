@@ -56,8 +56,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/mission" className="text-gray-400 hover:text-blue-400 transition-colors">
-                  Our Mission
+                <Link href="/for-buyers" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  For Buyers
+                </Link>
+              </li>
+              <li>
+                <Link href="/for-breeders" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  For Breeders
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  Pricing
                 </Link>
               </li>
               <li>
@@ -66,9 +76,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <button onClick={() => setShowPopup(true)} className="text-gray-400 hover:text-blue-400 transition-colors">
-                  Sign Up
-                </button>
+                <Link href="/faq" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  FAQ
+                </Link>
               </li>
             </ul>
           </div>

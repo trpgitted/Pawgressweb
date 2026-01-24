@@ -58,116 +58,17 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-b from-white to-gray-50 overflow-visible" id="features">
-      <div className="px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1800px] mx-auto overflow-visible">
-        {/* Section Header */}
-        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-blue-600 px-5 py-2.5 sm:px-7 sm:py-3 rounded-full text-sm sm:text-base font-semibold tracking-wide mb-6 sm:mb-8 shadow-lg shadow-blue-500/10 border border-blue-100">
-            <span className="text-lg sm:text-xl">✨</span>
-            <span>Why Choose Pawgress</span>
-          </div>
-          
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 sm:mb-8 font-baloo leading-tight">
-            Everything You Need for{' '}
-            <br className="hidden sm:block" />
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Professional Pet Care
-            </span>
-          </h2>
-          
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Our comprehensive platform connects ethical breeders and devoted pet owners through professional 
-            tools for growth tracking, health organization, and meaningful communication.
-          </p>
+    <section className="py-0 bg-white overflow-visible" id="features">
+      {/* Bottom CTA Section with Blue Background and Waves */}
+      <div className="bg-blue-100 py-16 sm:py-20 lg:py-24 px-8 sm:px-12 lg:px-16 relative overflow-hidden">
+        {/* Wave at top */}
+        <div className="absolute top-0 left-0 right-0 w-full overflow-hidden leading-none">
+          <svg className="relative block w-full h-16 sm:h-24 lg:h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+          </svg>
         </div>
 
-        {/* Features Showcase - Alternating Layout */}
-        <div className="space-y-8 sm:space-y-12 lg:space-y-24 mb-8 sm:mb-12 lg:mb-16">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group"
-            >
-              {/* Mobile separator between features */}
-              {index > 0 && (
-                <div className="lg:hidden mb-8 sm:mb-10">
-                  <div className="absolute left-0 right-0 w-full">
-                    <div className="relative">
-                      <div className="absolute inset-0 flex items-center">
-                        <div className="w-full border-t-2 border-gray-200"></div>
-                      </div>
-                      <div className="relative flex justify-center">
-                        <span className="bg-gradient-to-b from-white to-gray-50 px-4 text-sm text-gray-400 font-semibold">✦</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-              
-              <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 sm:gap-8 lg:gap-12 xl:gap-16 items-center p-4 sm:p-6 lg:p-0 rounded-2xl lg:rounded-none bg-white/50 lg:bg-transparent border-2 lg:border-0 border-gray-100`}>
-                {/* Feature Screenshot */}
-                <div className="w-full lg:w-5/12 max-w-xs lg:max-w-md mx-auto lg:mx-0">
-                  <div className="relative bg-gradient-to-br from-gray-50 to-white rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl shadow-gray-900/10 border border-gray-100/50 transition-all duration-500 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20">
-                    {/* Gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}></div>
-                    
-                    <div className="relative p-2 sm:p-2.5 md:p-3 lg:p-4">
-                      <img 
-                        src={feature.image} 
-                        alt={feature.title}
-                        className="w-full h-auto rounded-lg sm:rounded-xl lg:rounded-2xl shadow-lg transition-all duration-500 transform group-hover:scale-[1.02]"
-                      />
-                    </div>
-
-                    {/* Decorative corner element */}
-                    <div className={`absolute top-0 ${index % 2 === 0 ? 'right-0' : 'left-0'} w-24 h-24 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-20 ${index % 2 === 0 ? 'rounded-bl-[3rem]' : 'rounded-br-[3rem]'} transition-opacity duration-500 pointer-events-none`}></div>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="w-full lg:w-7/12 space-y-4 sm:space-y-5 md:space-y-6">
-                  {/* Icon Badge */}
-                  <div className="inline-flex items-center justify-center">
-                    <div className={`w-12 h-12 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 bg-gradient-to-br ${feature.iconBg.replace('bg-', 'from-')} ${feature.iconBg.replace('bg-', 'to-')} rounded-xl sm:rounded-2xl lg:rounded-3xl flex items-center justify-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl shadow-xl shadow-${feature.iconBg.split('-')[1]}-500/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
-                      {feature.icon}
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 font-baloo leading-tight group-hover:text-blue-600 transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-
-                  {/* Feature Highlights */}
-                  <div className="flex flex-wrap gap-2 sm:gap-3 pt-2 sm:pt-4">
-                    <span className={`px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-r ${feature.color} rounded-full text-xs sm:text-sm md:text-base font-semibold text-gray-700 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5`}>
-                      Easy to Use
-                    </span>
-                    <span className={`px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-r ${feature.color} rounded-full text-xs sm:text-sm md:text-base font-semibold text-gray-700 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5`}>
-                      Real-time
-                    </span>
-                    <span className={`px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-r ${feature.color} rounded-full text-xs sm:text-sm md:text-base font-semibold text-gray-700 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5`}>
-                      Secure
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA Section */}
-        <div className="relative bg-gradient-to-br from-blue-500/5 via-indigo-500/5 to-purple-500/5 rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-10 xl:p-12 backdrop-blur-sm border border-blue-100/50 overflow-hidden">
-          {/* Decorative background elements */}
-          <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-indigo-500/10 to-transparent rounded-full blur-3xl"></div>
-          
-          <div className="relative max-w-3xl mx-auto text-center">
+        <div className="relative max-w-3xl mx-auto text-center">
             {/* Main Image */}
             <div className="mb-6 sm:mb-8 lg:mb-10 relative">
               <div className="relative inline-block">
@@ -230,7 +131,6 @@ export default function Features() {
             </div>
           </div>
         </div>
-      </div>
       
       <ComingSoonPopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
     </section>

@@ -31,11 +31,15 @@ export default function Navigation() {
           <Link href="/" className={`hover:text-blue-600 transition-colors font-bold ${pathname === '/' ? 'text-blue-600' : ''}`}>
             Home
           </Link>
-          <Link href="/mission" className={`hover:text-blue-600 transition-colors font-bold ${pathname === '/mission' ? 'text-blue-600' : ''}`}>
-            Our Mission
+          <Link href="/for-buyers" className={`hover:text-blue-600 transition-colors font-bold ${pathname === '/for-buyers' ? 'text-blue-600' : ''}`}>
+            For Buyers
           </Link>
-          <a href="#buyers" className="hover:text-blue-600 transition-colors font-bold">For Buyers</a>
-          <a href="#breeders" className="hover:text-blue-600 transition-colors font-bold">For Breeders</a>
+          <Link href="/for-breeders" className={`hover:text-blue-600 transition-colors font-bold ${pathname === '/for-breeders' ? 'text-blue-600' : ''}`}>
+            For Breeders
+          </Link>
+          <Link href="/pricing" className={`hover:text-blue-600 transition-colors font-bold ${pathname === '/pricing' ? 'text-blue-600' : ''}`}>
+            Pricing
+          </Link>
           
           {/* About Dropdown */}
           <div 
@@ -43,7 +47,7 @@ export default function Navigation() {
             onMouseEnter={() => setAboutDropdownOpen(true)}
             onMouseLeave={() => setAboutDropdownOpen(false)}
           >
-            <button className={`hover:text-blue-600 transition-colors font-bold flex items-center gap-1 ${pathname === '/about' || pathname === '/terms' || pathname === '/privacy' ? 'text-blue-600' : ''}`}>
+            <button className={`hover:text-blue-600 transition-colors font-bold flex items-center gap-1 ${pathname === '/about' || pathname === '/terms' || pathname === '/privacy' || pathname === '/faq' ? 'text-blue-600' : ''}`}>
               About
               <svg className={`w-4 h-4 transition-transform duration-200 ${aboutDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -55,6 +59,9 @@ export default function Navigation() {
               <div className="w-48 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
                 <Link href="/about" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
                   About Us
+                </Link>
+                <Link href="/faq" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                  FAQ
                 </Link>
                 <Link href="/terms" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
                   Terms of Service

@@ -61,14 +61,17 @@ export default function SharedNav() {
           <Link href="/" className={`hover:text-blue-600 transition-colors font-medium ${pathname === '/' ? 'text-blue-600' : ''}`}>
             Home
           </Link>
-          <Link href="/#buyers" className="hover:text-blue-600 transition-colors font-medium">
+          <Link href="/for-buyers" className={`hover:text-blue-600 transition-colors font-medium ${pathname === '/for-buyers' ? 'text-blue-600' : ''}`}>
             For Buyers
           </Link>
-          <Link href="/#breeders" className="hover:text-blue-600 transition-colors font-medium">
+          <Link href="/for-breeders" className={`hover:text-blue-600 transition-colors font-medium ${pathname === '/for-breeders' ? 'text-blue-600' : ''}`}>
             For Breeders
           </Link>
-          <Link href="/#features" className="hover:text-blue-600 transition-colors font-medium">
-            Features
+          <Link href="/pricing" className={`hover:text-blue-600 transition-colors font-medium ${pathname === '/pricing' ? 'text-blue-600' : ''}`}>
+            Pricing
+          </Link>
+          <Link href="/contact" className={`hover:text-blue-600 transition-colors font-medium ${pathname === '/contact' ? 'text-blue-600' : ''}`}>
+            Contact
           </Link>
           
           {/* About Dropdown */}
@@ -77,7 +80,7 @@ export default function SharedNav() {
             onMouseEnter={() => setAboutDropdownOpen(true)}
             onMouseLeave={() => setAboutDropdownOpen(false)}
           >
-            <button className={`hover:text-blue-600 transition-colors font-medium flex items-center gap-1 ${pathname === '/about' || pathname === '/mission' || pathname === '/terms' || pathname === '/privacy' ? 'text-blue-600' : ''}`}>
+            <button className={`hover:text-blue-600 transition-colors font-medium flex items-center gap-1 ${pathname === '/about' || pathname === '/mission' || pathname === '/terms' || pathname === '/privacy' || pathname === '/faq' ? 'text-blue-600' : ''}`}>
               About
               <svg className={`w-4 h-4 transition-transform duration-200 ${aboutDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -92,6 +95,9 @@ export default function SharedNav() {
                 </Link>
                 <Link href="/mission" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
                   Our Mission
+                </Link>
+                <Link href="/faq" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
+                  FAQ
                 </Link>
                 <Link href="/terms" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium">
                   Terms of Service
@@ -143,25 +149,32 @@ export default function SharedNav() {
               Home
             </Link>
             <Link 
-              href="/#buyers" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
+              href="/for-buyers" 
+              className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 ${pathname === '/for-buyers' ? 'text-blue-600' : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               For Buyers
             </Link>
             <Link 
-              href="/#breeders" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
+              href="/for-breeders" 
+              className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 ${pathname === '/for-breeders' ? 'text-blue-600' : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               For Breeders
             </Link>
             <Link 
-              href="/#features" 
-              className="block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2"
+              href="/pricing" 
+              className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 ${pathname === '/pricing' ? 'text-blue-600' : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              Features
+              Pricing
+            </Link>
+            <Link 
+              href="/contact" 
+              className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 ${pathname === '/contact' ? 'text-blue-600' : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
             </Link>
             
             {/* About Section in Mobile */}
@@ -180,6 +193,13 @@ export default function SharedNav() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Our Mission
+              </Link>
+              <Link 
+                href="/faq" 
+                className={`block text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 pl-4 ${pathname === '/faq' ? 'text-blue-600' : ''}`}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                FAQ
               </Link>
               <Link 
                 href="/terms" 
