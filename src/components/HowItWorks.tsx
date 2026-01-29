@@ -346,7 +346,7 @@ export default function HowItWorks() {
                       {/* Clickable header */}
                       <button
                         onClick={() => toggleBuyerStep(index)}
-                        className="w-full text-left p-4 sm:p-6 focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-xl"
+                        className="w-full text-left p-4 sm:p-6 focus:outline-none rounded-xl"
                       >
                         {/* Icon in colored box */}
                         <div className="relative flex justify-between items-start mb-3 sm:mb-4">
@@ -394,7 +394,7 @@ export default function HowItWorks() {
                   
                   <button
                     onClick={() => toggleBuyerFeature(0)}
-                    className="w-full text-left p-4 sm:p-6 focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-xl"
+                    className="w-full text-left p-4 sm:p-6 focus:outline-none rounded-xl"
                   >
                     <div className="relative flex items-center justify-between mb-3 sm:mb-4">
                       <div className="flex items-center gap-3">
@@ -434,7 +434,7 @@ export default function HowItWorks() {
                   
                   <button
                     onClick={() => toggleBuyerFeature(1)}
-                    className="w-full text-left p-4 sm:p-6 focus:outline-none focus:ring-2 focus:ring-pink-500/50 rounded-xl"
+                    className="w-full text-left p-4 sm:p-6 focus:outline-none rounded-xl"
                   >
                     <div className="relative flex items-center justify-between mb-3 sm:mb-4">
                       <div className="flex items-center gap-3">
@@ -505,7 +505,7 @@ export default function HowItWorks() {
                       {/* Clickable header */}
                       <button
                         onClick={() => toggleBreederStep(index)}
-                        className="w-full text-left p-4 sm:p-6 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 rounded-xl"
+                        className="w-full text-left p-4 sm:p-6 focus:outline-none rounded-xl"
                       >
                         {/* Icon in colored box */}
                         <div className="relative flex justify-between items-start mb-3 sm:mb-4">
@@ -553,7 +553,7 @@ export default function HowItWorks() {
                   
                   <button
                     onClick={() => toggleBreederFeature(0)}
-                    className="w-full text-left p-4 sm:p-6 focus:outline-none focus:ring-2 focus:ring-orange-500/50 rounded-xl"
+                    className="w-full text-left p-4 sm:p-6 focus:outline-none rounded-xl"
                   >
                     <div className="relative flex items-center justify-between mb-3 sm:mb-4">
                       <div className="flex items-center gap-3">
@@ -593,7 +593,7 @@ export default function HowItWorks() {
                   
                   <button
                     onClick={() => toggleBreederFeature(1)}
-                    className="w-full text-left p-4 sm:p-6 focus:outline-none focus:ring-2 focus:ring-pink-500/50 rounded-xl"
+                    className="w-full text-left p-4 sm:p-6 focus:outline-none rounded-xl"
                   >
                     <div className="relative flex items-center justify-between mb-3 sm:mb-4">
                       <div className="flex items-center gap-3">
